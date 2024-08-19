@@ -1,0 +1,233 @@
+body {
+    position: relative;
+    color: #2c2c2c;
+    font-size: 17px;
+    font-family: montserrat, helvetica neue, Arial, sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    margin-top: 0;
+    box-shadow: 0 6px 10px rgba(177, 172, 172, 0.5);
+    background-color: #378c3f !important;
+
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+.logo {
+    font-size: 30px;
+    color: white !important;
+}
+
+.nav-item {
+    border-radius: 8px;
+}
+
+.nav-link {
+    color: #ffffff;
+    border-radius: 8px;
+}
+
+.nav-link {
+    margin-left: 20px !important;
+}
+
+/* BTN */
+.btn-brand {
+    width: 150px;
+    background-color: orange;
+    color: white !important;
+    font-size: 19px;
+    border: none;
+}
+
+.btn-brand:hover {
+    background-color: rgba(255, 166, 0, 0.82);
+    color: black !important;
+}
+
+/* Slider */
+#home {
+    margin-top: 40px;
+}
+
+#home .carousel-inner p {
+    color: rgb(255, 255, 255);
+}
+
+#home .img-slider {
+    height: 500px !important;
+    object-fit: cover;
+}
+
+/* Member */
+
+
+#member .img-member {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+
+.page--CV {
+    box-shadow: 0 6px 10px rgba(63, 62, 62, 0.5);
+    border-radius: 3%;
+    height: 350px;
+}
+
+.image {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-cv {
+    object-fit: cover;
+}
+
+/* Watch CV */
+.image {
+    width: 70%;
+    margin: auto;
+}
+
+.image .img-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.image .overlay {
+    position: absolute;
+    top: -10%;
+    width: 100%;
+    height: 168px;
+    background-color: rgba(55, 140, 63, 0.8);
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.image .social-links {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.image:hover .overlay {
+    opacity: 1;
+    top: 1rem;
+}
+
+.image:hover .social-links {
+    opacity: 1;
+    top: 50%;
+}
+
+/* Contact */
+
+.numberphone:hover {
+    color: #15601d !important;
+}
+
+/* Partner */
+.partner-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+/* About */
+
+
+.about-image {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+}
+
+.about-image--item {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 2px solid rgba(55, 140, 63);
+    padding: 0;
+}
+
+.about-image--item:hover {
+    width: 200px;
+    height: 200px;
+}
+
+/* footer */
+#footer {
+    background-color: rgba(55, 140, 63, 0.8) !important;
+}
+
+#footer .footer-icon i {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+#footer .footer-icon .ti-facebook:hover {
+    color: #3B5998;
+}
+
+#footer .footer-icon .ti-twitter-alt:hover {
+    color: #1DA1F2;
+}
+
+#footer .footer-icon .ti-youtube:hover {
+    color: #EA4335;
+}
+
+.footer-numberphone:hover {
+    color: black !important;
+}
+
+.location {
+    padding-bottom: 2%;
+}
+
+/* responsive */
+@media (max-width: 992px) {
+    .image {
+        width: 60%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .image {
+        width: 50%;
+        margin: auto;
+    }
+
+    .para {
+        text-align: center;
+    }
+}
+
+@media (max-width: 280px) {
+    .logo {
+        font-size: 20px;
+        color: white !important;
+    }
+}
