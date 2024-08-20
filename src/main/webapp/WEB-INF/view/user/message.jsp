@@ -25,116 +25,53 @@
       <table class="table table-striped table-hover">
         <thead>
           <tr class="top-table">
-            <th scope="col">ID</th>
-            <th scope="col">Name</th>
+            <th scope="col">Họ và tên</th>
+            <th scope="col">Ngày sinh</th>
+            <th scope="col">Giới tính</th>
+            <th scope="col">Địa chỉ</th>
             <th scope="col">Email</th>
-            <th scope="col">Date</th>
-            <th scope="col">Status</th>
-            <th scope="col">Method</th>
-            <th scope="col">Task</th>
+            <th scope="col">Số điện thoại</th>
+            <th scope="col">Hành động</th>
           </tr>
         </thead>
         <tbody class="table-group-divider">
           <tr>
-            <th scope="row" class="id-message">01</th>
-            <td>Nguyễn Văn A</td>
-            <td>nguyenvana@gmail.com</td>
-            <td>15-03-2022</td>
-            <td>Already seen</td>
-            <td>Gmail</td>
+            <td>Nguyễn Quang Thái</td>
+            <td>17-04-2002</td>
+            <td>Nam</td>
+            <td>Hải Dương</td>
+            <td>quangthai170402@gmail.com</td>
+            <td>0343282228</td>
             <td>
-              <div class="text-center">
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
-                  Del
-                </button>
-              </div>
-              <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false"
-                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">Delete Message</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <h5 class="text-body">Are you sure want to delete this message ?</h5>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-info btn-delete-message"
-                        data-bs-dismiss="modal">Delete</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <a type="button" class="btn btn-success">
+                View
+              </a>
+              <a type="button" class="btn btn-warning">
+                Update
+              </a>
+              <a type="button" class="btn btn-danger">
+                Delete
+              </a>
             </td>
-          </tr>
-          <tr>
-            <th scope="row" class="id-message">02</th>
-            <td>Pham Minh H</td>
-            <td>phamminhh@gmail.com</td>
-            <td>29-01-2022</td>
-            <td>Already seen</td>
-            <td>Gmail</td>
-            <td>
-              <div class="text-center">
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
-                  Del
-                </button>
-              </div>
-              <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false"
-                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">Delete Message</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <h5 class="text-body">Are you sure want to delete this message ?</h5>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-info btn-delete-message"
-                        data-bs-dismiss="modal">Delete</button>
-                    </div>
+            <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false"
+              tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Delete Message</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h5 class="text-body">Are you sure want to delete this message ?</h5>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-info btn-delete-message"
+                      data-bs-dismiss="modal">Delete</button>
                   </div>
                 </div>
               </div>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row" class="id-message">03</th>
-            <td>Hoàng Manh K</td>
-            <td>hoangkhoa@gmail.com</td>
-            <td>30-11-2022</td>
-            <td>Not seen</td>
-            <td>Gmail</td>
-            <td>
-              <div class="text-center">
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
-                  Del
-                </button>
-              </div>
-              <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false"
-                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">Delete Messages</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <h5 class="text-body">Are you sure want to delete this messages ?</h5>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-info btn-delete-message"
-                        data-bs-dismiss="modal">Delete</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            </div>
             </td>
           </tr>
         </tbody>

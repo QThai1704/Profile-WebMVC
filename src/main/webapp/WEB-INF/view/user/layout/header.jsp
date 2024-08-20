@@ -11,22 +11,22 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/">Homepage</a>
+                            <a class="nav-link" href="/">Trang chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/user">User</a>
+                            <a class="nav-link" href="/user">Về tôi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/user/profile">Profiles</a>
+                            <a class="nav-link" href="/user/profile">Hồ sơ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/user/message">Messages</a>
+                            <a class="nav-link" href="/user/message">Thông tin</a>
                         </li>
                         <li class="nav-item">
                             <h1>Xin chào, Admin</h1>
                         </li>
                         <li class="nav-item">
-                            <a type="button" class="btn btn-logout" id="btn-logout" href="/login">LogOut</a>
+                            <a type="button" class="btn btn-logout" id="btn-logout" href="/login">Đăng xuất</a>
                         </li>
                     </ul>
                 </div>

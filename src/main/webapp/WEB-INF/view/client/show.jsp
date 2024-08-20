@@ -35,19 +35,19 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="#home">Home</a>
+                                <a class="nav-link" href="#home">Trang chủ</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#member">Member</a>
+                                <a class="nav-link" href="#member">Thành viên</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#contact">Contact</a>
+                                <a class="nav-link" href="#contact">Liên hệ</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#about">About</a>
+                                <a class="nav-link" href="#about">Về chúng tôi</a>
                             </li>
                         </ul>
-                        <a href="/login" class="btn btn-brand ms-lg-3 ">Login</a>
+                        <a href="/login" class="btn btn-brand ms-lg-3 ">Đăng nhập</a>
                     </div>
                 </div>
             </nav>
@@ -69,7 +69,7 @@
                     <div class="carousel-item active" data-bs-interval="3000">
                         <img src="/images/picture4.jpg" class="d-block w-100 h-100 img-slider" alt="...">
                         <div class="carousel-caption d-block">
-                            <p class="h1 text-uppercase">Welcome to Project_N9</p>
+                            <p class="h1 text-uppercase">Chào mừng đến với dự án của tôi</p>
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
@@ -103,7 +103,7 @@
         <section id="member" class="mt-5">
             <div class="container">
                 <div class="row ">
-                    <h1 class="h3 member-header text-dark my-3">Member</h1>
+                    <h1 class="h3 member-header text-dark my-3">Các thành viên</h1>
                 </div>
                 <div class="row justify-content-around py-2">
                     <div class="col-lg-3 my-2 ">
@@ -114,8 +114,8 @@
                                     <h4 class="text-center py-3">
                                         <i class="ti-pin icon--pin text-primary"></i>
                                     </h4>
-                                    <p class="text-center">Name: Nguyen Dang Phuong</p>
-                                    <p class="text-center my-2">Student ID: 2051063453</p>
+                                    <p class="text-center">Nguyễn Đăng Phương</p>
+                                    <p class="text-center my-2">Fresher Web Developer</p>
                                     <div class="image">
                                         <img src="/images/phuong2.jpg" alt="Placeholder"
                                             class="img-member py-3 text-center image-cv" />
@@ -137,8 +137,8 @@
                                     <h4 class="text-center py-3">
                                         <i class="ti-pin icon--pin text-warning"></i>
                                     </h4>
-                                    <p class="text-center my-2">Name: Nguyen Van Hieu</p>
-                                    <p class="text-center">Student ID: 2051060510</p>
+                                    <p class="text-center my-2">Nguyễn Văn Hiếu</p>
+                                    <p class="text-center">An ninh mạng</p>
                                     <div class="image">
                                         <img src="/images/hieu3.jpg" alt="Placeholder"
                                             class="img-member py-3 text-center image-cv" />
@@ -160,8 +160,8 @@
                                     <h4 class="text-center py-3">
                                         <i class="ti-pin icon--pin text-success"></i>
                                     </h4>
-                                    <p class="text-center my-2">Name: Nguyen Quang Thai</p>
-                                    <p class="text-center">Student ID: 2051063464</p>
+                                    <p class="text-center my-2">Nguyễn Quang Thái</p>
+                                    <p class="text-center">Java Developer</p>
                                     <div class="image">
                                         <img src="/images/thai2.jpg" alt="Placeholder"
                                             class="img-member py-3 text-center image-cv" />
@@ -187,38 +187,37 @@
                 <div class="row">
                     <div class="col-md-7">
                         <div class="row my-3">
-                            <h1 class="h3 member-header text-dark ">Contact</h1>
+                            <h1 class="h3 member-header text-dark ">Liên hệ</h1>
                         </div>
                         <div class="row text-dark">
-                            <p class="h5 mb-2">Hotline:</p>
+                            <p class="h5 mb-2">Số điện thoại:</p>
                             <p class="contact-member my-1">
                                 <i class="ti-mobile"> </i>
                                 <a href="#" class="numberphone">0329603280</a>
-                                <span>- Nguyen Dang Phuong</span>
+                                <span>- Nguyễn Đăng Phương</span>
                             </p>
                             <p class="contact-member my-1">
                                 <i class="ti-mobile"> </i>
                                 <a href="#" class="numberphone">0343282228</a>
-                                <span>- Nguyễn Quang Thai</span>
+                                <span>- Nguyễn Quang Thái</span>
                             </p>
                             <p class="contact-member my-1">
                                 <i class="ti-mobile"> </i>
                                 <a href="#" class="numberphone">0973513198</a>
-                                <span>- Nguyen Van Hieu</span>
+                                <span>- Nguyễn Văn Hiếu</span>
                             </p>
                         </div>
                         <div class="row text-dark mt-5">
                             <p>
                                 <i class="ti-pencil-alt2"> </i>
-                                Please contact us immediately with me when you need. We are with you every step of the
-                                way
-                                future. Thank you and have a nice day
+                                Hãy liên hệ ngay với chúng tôi khi bạn có nhu cầu. Chúng tôi luôn đồng hành cùng bạn
+                                trên mọi chặng đường tương lai. Cảm ơn bạn và chúc một ngày tốt lành.
                             </p>
                         </div>
 
                     </div>
                     <div class="col-md-5">
-                        <h1 class="h3 member-header text-dark my-3">Partner</h1>
+                        <h1 class="h3 member-header text-dark my-3">Đối tác</h1>
                         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                             <div class="carousel-indicators">
                                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
@@ -271,39 +270,38 @@
         <section id="about" class="mt-5">
             <div class="container">
                 <div class="row ">
-                    <h1 class="h3 member-header text-dark my-3">About</h1>
+                    <h1 class="h3 member-header text-dark my-3">Về chúng tôi</h1>
                 </div>
                 <div class="row justify-content-between py-2 text-dark text-center">
                     <div class="col-md-4 ">
                         <div class="row about-image text-center">
                             <img src="/images/phuong.jpg" alt="Đăng Phương" class="about-image--item">
                         </div>
-                        <p class="mt-1 mb-2 h5 text-center">Nguyen Dang Phuong</p>
+                        <p class="mt-1 mb-2 h5 text-center">Nguyễn Đăng Phương</p>
                         <div class="row para">
-                            <p>Job: Student</p>
-                            <p class="my-2">Workplace: Thuy Loi University</p>
+                            <p>Công việc: Sinh viên</p>
+                            <p class="my-2">Địa điểm làm việc: Trường Đại học Thủy Lợi</p>
                         </div>
                     </div>
                     <div class="col-md-4 mt-2">
                         <div class="row about-image text-center">
                             <img src="/images/hieu.jpg" alt="Văn Hiếu" class="about-image--item">
                         </div>
-                        <p class="mt-1 mb-2 h5 text-center">Nguyen Van Hieu</p>
+                        <p class="mt-1 mb-2 h5 text-center">Nguyễn Văn Hiếu</p>
                         <div class="row para">
-                            <p>Job: Student</p>
-                            <p class="my-2">Workplace: Thuy Loi University</p>
+                            <p>Công việc: Sinh viên</p>
+                            <p class="my-2">Địa điểm làm việc: Trường Đại học Thủy Lợi</p>
                         </div>
                     </div>
                     <div class="col-md-4 mt-2">
                         <div class="row about-image text-center">
                             <img src="/images/thai.jpg" alt="Quang Thái" class="about-image--item">
                         </div>
-                        <p class="h5 mt-1 mb-2 text-center">Nguyen Quang Thai</p>
-                        <div class="row para ">
-                            <p>Job: Student</p>
-                            <p class="my-2">Workplace: Thuy Loi University</p>
+                        <p class="mt-1 mb-2 h5 text-center">Nguyễn Quang Thái</p>
+                        <div class="row para">
+                            <p>Công việc: Sinh viên</p>
+                            <p class="my-2">Địa điểm làm việc: Trường Đại học Thủy Lợi</p>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -314,19 +312,18 @@
             <div class="container mt-3 text-light">
                 <div class="row border-bottom border-secondary border-2 justify-content-between">
                     <div class="col-lg-5 location">
-                        <p class="h4 border-bottom border-secondary pt-3">Location Ha Noi</p>
-                        <p class="mt-3"><i class="ti-location-pin"></i> Address: 175 Tay Son street, Dong Da district,
-                            Ha
-                            Noi city</p>
-                        <p class="mt-3"><i class="ti-mobile"></i> Numberphone: <a class="text-light footer-numberphone"
-                                href="#">0343282228</a>
+                        <p class="h4 border-bottom border-secondary pt-3">Cơ sở Hà Nội</p>
+                        <p class="mt-3"><i class="ti-location-pin"></i> Địa chỉ: Số 175 Tây Sơn, quận Đống Đa, TP
+                            Hà Nội</p>
+                        <p class="mt-3"><i class="ti-mobile"></i> Số điện thoại: <a
+                                class="text-light footer-numberphone" href="#">0343282228</a>
                         </p>
                         <p class="mt-3"><i class="ti-email"></i> Email: quangthai170402@gmail.com</p>
                     </div>
                     <div class="col-lg-5 location">
-                        <p class="h4 border-bottom border-secondary pt-3">Location Ho Chi Minh</p>
-                        <p class="mt-3"><i class="ti-location-pin"></i> Address: 2 Truong Sa street, 17 ward, Binh Thanh
-                            district, Ho Chi Minh city</p>
+                        <p class="h4 border-bottom border-secondary pt-3">Cơ sở Hồ Chí Minh</p>
+                        <p class="mt-3"><i class="ti-location-pin"></i> Địa chỉ: Số 2 Trường Sa, phường 17 , quận Bình
+                            Thạnh, TP HCM</p>
                         <p class="mt-3"><i class="ti-mobile"></i> Numberphone: <a class="text-light footer-numberphone"
                                 href="#">0343282228</a>
                         </p>

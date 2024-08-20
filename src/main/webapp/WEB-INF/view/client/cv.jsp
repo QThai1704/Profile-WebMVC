@@ -66,10 +66,10 @@
                 <div class="profile-image">
                   <a href="#"><img src="/images/thai.jpg" alt="profile image"></a>
                 </div>
-                <h2>Nguyen Quang Thai</h2>
-                <p class="category">Web Developer, Graphic Designer, Photographer</p>
-                <a class="btn btn-success mr-2" href="#contact" data-aos="zoom-in">Hire Me</a>
-                <a class="btn btn-success" href="#" data-aos="zoom-in">Download CV</a>
+                <h2>Nguyễn Quang Thái</h2>
+                <p class="category">Fresher Java Developer</p>
+                <a class="btn btn-success mr-2" href="#contact" data-aos="zoom-in">Liên hệ</a>
+                <a class="btn btn-success" href="#" data-aos="zoom-in">Tải CV</a>
               </div>
             </div>
           </div>
@@ -97,38 +97,38 @@
             <div class="row">
               <div class="col-lg-6 col-md-12">
                 <div class="card-body">
-                  <h4 class="mt-0 title">About</h4>
+                  <h4 class="mt-0 title">Mục tiêu</h4>
                   <p>Hello! I am Nguyen Quang Thai. Web Developer, Graphic Designer and Photographer.</p>
                   <p>
                     Creative CV is a HTML resume template for professionals. Built with Bootstrap 4, Now UI Kit and
                     FontAwesome, this modern and responsive design template is perfect to showcase your portfolio,
                     skills and experience.
-                    <a href="https://templateflip.com/templates/creative-cv/">Learn More</a>
+                    <a href="#">Learn More</a>
                   </p>
                 </div>
               </div>
               <div class="col-lg-6 col-md-12">
                 <div class="card-body">
-                  <h4 class="mt-0 title">Basic Information</h4>
+                  <h4 class="mt-0 title">Thông tin</h4>
                   <div class="row">
-                    <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
-                    <div class="col-sm-8">21</div>
+                    <div class="col-sm-4"><strong class="text-uppercase">Tuổi:</strong></div>
+                    <div class="col-sm-8">22</div>
                   </div>
                   <div class="row mt-3">
                     <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
                     <div class="col-sm-8">quangthai170402@gmail.com</div>
                   </div>
                   <div class="row mt-3">
-                    <div class="col-sm-4"><strong class="text-uppercase">Phone:</strong></div>
-                    <div class="col-sm-8">+84343282xxx</div>
+                    <div class="col-sm-4"><strong class="text-uppercase">Số điện thoại:</strong></div>
+                    <div class="col-sm-8">0343282228</div>
                   </div>
                   <div class="row mt-3">
-                    <div class="col-sm-4"><strong class="text-uppercase">Address:</strong></div>
+                    <div class="col-sm-4"><strong class="text-uppercase">Địa chỉ:</strong></div>
                     <div class="col-sm-8">8, Nguyen Trai street, Hai Duong</div>
                   </div>
                   <div class="row mt-3">
-                    <div class="col-sm-4"><strong class="text-uppercase">Language:</strong></div>
-                    <div class="col-sm-8">English, Vietnamese</div>
+                    <div class="col-sm-4"><strong class="text-uppercase">Ngôn ngữ sử dụng:</strong></div>
+                    <div class="col-sm-8">Tiếng Anh, Tiếng Việt</div>
                   </div>
                 </div>
               </div>
@@ -141,7 +141,7 @@
       <section id="skills">
         <div class="container">
           <div class="text-center">
-            <h4 class="mb-4 title">Professional Skills</h4>
+            <h4 class="mb-4 title">Kỹ năng</h4>
           </div>
           <div class="card" data-aos="fade-up" data-aos-offset="10" data-aos-anchor-placement="top-bottom">
             <div class="card-body skill-items">
@@ -210,7 +210,7 @@
           <div class="row">
             <div class="col-md-6 ml-auto mr-auto">
               <div class="text-center">
-                <h4 class="mb-4 title">Portfolio</h4>
+                <h4 class="mb-4 title">Dự án</h4>
               </div>
               <div class="nav-align-center">
                 <ul class="nav nav-pills">
@@ -422,7 +422,7 @@
       <section id="experience">
         <div class="container work-experience">
           <div class="text-center mb-4 title">
-            <h4>Work Experience</h4>
+            <h4>Kinh nghiệm làm việc</h4>
           </div>
           <div class="card">
             <div class="row">
@@ -492,7 +492,7 @@
       <section>
         <div class="container education">
           <div class="text-center mb-4 title">
-            <h4>Education</h4>
+            <h4>Thành tích</h4>
           </div>
           <div class="card">
             <div class="row">
@@ -516,7 +516,7 @@
               </div>
             </div>
           </div>
-          <div class="card">
+          <div class=" card">
             <div class="row">
               <div class="col-md-3 bg-success" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
                 <div class="card-body education-header">
@@ -528,8 +528,10 @@
                 <div class="card-body">
                   <h5>Bachelor of Computer Science</h5>
                   <p class="category">University of Computer Science</p>
-                  <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis,
-                    tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend
+                  <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam
+                    iaculis,
+                    tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel
+                    eleifend
                     primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros
                     pulvinar
                     curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie
@@ -550,76 +552,14 @@
                 <div class="card-body">
                   <h5>Science and Mathematics</h5>
                   <p class="category">School of Secondary board</p>
-                  <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis,
-                    tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend
+                  <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam
+                    iaculis,
+                    tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel
+                    eleifend
                     primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros
                     pulvinar
                     curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie
                     ultricies sollicitudin dui.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- REFERENCES -->
-      <section id="reference">
-        <div class="container">
-          <div class="text-center mb-4 title">
-            <h4>References</h4>
-          </div>
-          <div class="card" data-aos="zoom-in">
-            <div class="owl-carousel owl-theme" id="reference-slider">
-              <div class="row">
-                <div class="col-lg-2 col-md-3 reference-header text-center">
-                  <img src="/images/template-images/reference-image-1.jpg" alt="Image" class="img-center">
-                  <div class="pt-2">
-                    <h5>Aiyana</h5>
-                  </div>
-                  <p class="category">CEO / WEBM</p>
-                </div>
-                <div class="col-lg-10 col-md-9">
-                  <p> Habitasse venenatis commodo tempor eleifend arcu sociis sollicitudin ante pulvinar ad, est porta
-                    cras erat ullamcorper volutpat metus duis platea convallis, tortor primis ac quisque etiam luctus
-                    nisl
-                    nullam fames. Ligula purus suscipit tempus nascetur curabitur donec nam ullamcorper, laoreet nullam
-                    mauris dui aptent facilisis neque elementum ac, risus semper felis parturient fringilla rhoncus
-                    eleifend.</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-2 col-md-3 reference-header text-center">
-                  <img src="/images/template-images/reference-image-2.jpg" alt="Image" class="img-center">
-                  <div class="pt-2">
-                    <h5>Braiden</h5>
-                  </div>
-                  <p class="category">CEO / CreativeM</p>
-                </div>
-                <div class="col-lg-10 col-md-9">
-                  <p> Habitasse venenatis commodo tempor eleifend arcu sociis sollicitudin ante pulvinar ad, est porta
-                    cras erat ullamcorper volutpat metus duis platea convallis, tortor primis ac quisque etiam luctus
-                    nisl
-                    nullam fames. Ligula purus suscipit tempus nascetur curabitur donec nam ullamcorper, laoreet nullam
-                    mauris dui aptent facilisis neque elementum ac, risus semper felis parturient fringilla rhoncus
-                    eleifend.</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-2 col-md-3 reference-header text-center">
-                  <img src="/images/template-images/reference-image-3.jpg" alt="Image" class="img-center">
-                  <div class="pt-2">
-                    <h5>Alexander</h5>
-                  </div>
-                  <p class="category">CEO / Webnote</p>
-                </div>
-                <div class="col-lg-10 col-md-9">
-                  <p> Habitasse venenatis commodo tempor eleifend arcu sociis sollicitudin ante pulvinar ad, est porta
-                    cras erat ullamcorper volutpat metus duis platea convallis, tortor primis ac quisque etiam luctus
-                    nisl
-                    nullam fames. Ligula purus suscipit tempus nascetur curabitur donec nam ullamcorper, laoreet nullam
-                    mauris dui aptent facilisis neque elementum ac, risus semper felis parturient fringilla rhoncus
-                    eleifend.</p>
                 </div>
               </div>
             </div>
@@ -636,13 +576,13 @@
                 <div class="col-md-9">
                   <div class="card mb-0" data-aos="zoom-in">
                     <div class="text-center title">
-                      <h4>Contact Me</h4>
+                      <h4>Liên hệ</h4>
                     </div>
                     <div class="row">
                       <div class="col-md-6">
                         <div class="card-body">
                           <form action="#">
-                            <div class="p pb-3"><strong>Feel free to contact me</strong></div>
+                            <div class="p pb-3"><strong>Liên hệ với tôi</strong></div>
                             <div class="row mb-3">
                               <div class="col">
                                 <div class="input-group">
@@ -665,7 +605,7 @@
                               <div class="col">
                                 <div class="input-group">
                                   <span class="input-group-addon"><i class="fa-solid fa-envelope"></i></span>
-                                  <input class="form-control" type="email" name="email" placeholder="E-mail"
+                                  <input class="form-control" type="email" name="email" placeholder="Email"
                                     required="required" />
                                 </div>
                               </div>
@@ -680,7 +620,7 @@
                             </div>
                             <div class="row">
                               <div class="col">
-                                <button class="btn btn-success" type="submit">Send</button>
+                                <button class="btn btn-success" type="submit">Gửi</button>
                               </div>
                             </div>
                           </form>
@@ -688,10 +628,10 @@
                       </div>
                       <div class="col-md-6">
                         <div class="card-body">
-                          <p class="mb-0"><strong>Address</strong></p>
+                          <p class="mb-0"><strong>Địa chỉ</strong></p>
                           <p class="pb-2">8, Nguyen Trai street, Hai Duong</p>
-                          <p class="mb-0"><strong>Phone</strong></p>
-                          <p class="pb-2">+84343282xxx</p>
+                          <p class="mb-0"><strong>Số điện thoại</strong></p>
+                          <p class="pb-2">0343282228</p>
                           <p class="mb-0"><strong>Email</strong></p>
                           <p>quangthai170402@gmail.com</p>
                         </div>
@@ -723,11 +663,10 @@
         </a>
       </div>
       <div class="title text-center">
-        <h4>Anthony Barnett</h4>
+        <h4>MY PROJECT</h4>
       </div>
       <div class="text-center">
-        <p>&copy; Creative CV. All rights reserved.<br>Design - <a class="credit"
-            href="https://templateflip.com">TemplateFlip</a></p>
+        <p>&copy; Creative CV. All rights reserved.<br>Design - <a class="credit" href="#">TemplateFlip</a></p>
       </div>
     </footer>
 

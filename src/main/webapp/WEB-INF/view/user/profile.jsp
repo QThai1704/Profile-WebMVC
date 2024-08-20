@@ -27,32 +27,20 @@
             <div class="card">
               <img src="/images/overview.jpg" class="card-img-top" width="400px">
               <div class="card-body">
-                <h5 class="card-title">Overview</h5>
+                <h5 class="card-title">Mục tiêu</h5>
                 <div class="text-center">
-                  <a href="/user/profile/overview" class="btn btn-outline-success">View</a>
+                  <a href="/user/profile/overview" class="btn btn-outline-success">Xem</a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img src="/images/aboutnew.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">About</h5>
-                <div class="text-center">
-                  <a href="/user/profile/about" class="btn btn-outline-success">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div class="col-md-4">
             <div class="card">
               <img src="/images/sokiu.jpeg" class="card-img-top">
               <div class="card-body">
-                <h5 class="card-title">Skills</h5>
+                <h5 class="card-title">Kỹ năng</h5>
                 <div class="text-center">
-                  <a href="/user/profile/skill" class="btn btn-outline-success">View</a>
+                  <a href="/user/profile/skill" class="btn btn-outline-success">Xem</a>
                 </div>
               </div>
             </div>
@@ -62,9 +50,9 @@
             <div class="card">
               <img src="/images/17-31.jpg" class="card-img-top">
               <div class="card-body">
-                <h5 class="card-title">Portifolios</h5>
+                <h5 class="card-title">Dự án</h5>
                 <div class="text-center">
-                  <a href="/user/profile/portifolio" class="btn btn-outline-success">View</a>
+                  <a href="/user/profile/portifolio" class="btn btn-outline-success">Xem</a>
                 </div>
               </div>
             </div>
@@ -74,9 +62,9 @@
             <div class="card">
               <img src="/images/exp.jpeg" class="card-img-top">
               <div class="card-body">
-                <h5 class="card-title">Experience</h5>
+                <h5 class="card-title">Kinh nghiệm</h5>
                 <div class="text-center">
-                  <a href="/user/profile/experience" class="btn btn-outline-success">View</a>
+                  <a href="/user/profile/experience" class="btn btn-outline-success">Xem</a>
                 </div>
               </div>
             </div>
@@ -86,9 +74,21 @@
             <div class="card">
               <img src="/images/contact.jpeg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Contact</h5>
+                <h5 class="card-title">Thành tích</h5>
                 <div class="text-center">
-                  <a href="/user/profile/contact" class="btn btn-outline-success">View</a>
+                  <a href="/user/profile/contact" class="btn btn-outline-success">Xem</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <img src="/images/aboutnew.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Mạng xã hội</h5>
+                <div class="text-center">
+                  <a href="/user/profile/about" class="btn btn-outline-success">Xem</a>
                 </div>
               </div>
             </div>
