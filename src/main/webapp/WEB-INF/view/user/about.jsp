@@ -136,13 +136,15 @@
         <td class="information-about">Creative CV is a HTML resume template for professionals....</td>
         <td>
           <div class="text-center">
-            <button type="button" class="btn btn-info btn-edit-about" data-bs-toggle="modal"
-              data-bs-target="#exampleModal2">
-              Edit
-            </button>
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
-              Del
-            </button>
+            <a type="button" class="btn btn-success">
+              View
+            </a>
+            <a type="button" class="btn btn-warning">
+              Update
+            </a>
+            <a type="button" class="btn btn-danger">
+              Delete
+            </a>
             <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
               aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered">

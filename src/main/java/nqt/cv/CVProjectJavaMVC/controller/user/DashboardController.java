@@ -20,9 +20,9 @@ public class DashboardController {
         return "user/profile";
     }
 
-    @GetMapping("/user/profile/overview")
-    public String getOverview() {
-        return "user/overview";
+    @GetMapping("/user/profile/target")
+    public String getTarget() {
+        return "user/target";
     }
 
     @GetMapping("/user/profile/about")

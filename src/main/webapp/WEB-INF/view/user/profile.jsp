@@ -29,7 +29,7 @@
               <div class="card-body">
                 <h5 class="card-title">Mục tiêu</h5>
                 <div class="text-center">
-                  <a href="/user/profile/overview" class="btn btn-outline-success">Xem</a>
+                  <a href="/user/profile/target" class="btn btn-outline-success">Xem</a>
                 </div>
               </div>
             </div>
