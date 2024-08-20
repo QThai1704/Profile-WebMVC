@@ -33,22 +33,25 @@
             <div class="collapse navbar-collapse" id="navigation">
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="#about">About</a>
+                  <a class="nav-link" href="#about">Thông tin</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#skills">Skills</a>
+                  <a class="nav-link" href="#skills">Kỹ năng</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#portfolio">Portfolio</a>
+                  <a class="nav-link" href="#portfolio">Dự án</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#experience">Experience</a>
+                  <a class="nav-link" href="#experience">Kinh nghiệm</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#contact">Contact</a>
+                  <a class="nav-link" href="#achievement">Thành tích</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/">Homepage</a>
+                  <a class="nav-link" href="#contact">Liên hệ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Trang chủ</a>
                 </li>
             </div>
           </div>
@@ -67,7 +70,7 @@
                   <a href="#"><img src="/images/thai.jpg" alt="profile image"></a>
                 </div>
                 <h2>Nguyễn Quang Thái</h2>
-                <p class="category">Fresher Java Developer</p>
+                <h3 class="category">Fresher Java</h3>
                 <a class="btn btn-success mr-2" href="#contact" data-aos="zoom-in">Liên hệ</a>
                 <a class="btn btn-success" href="#" data-aos="zoom-in">Tải CV</a>
               </div>
@@ -77,13 +80,11 @@
         <div class="section">
           <div class="container">
             <div class="button-container">
-              <a class="btn-default btn-lg btn-icon" href="#" title="Follow me on Facebook"><i
+              <a class="btn-default btn-lg btn-icon" href="" title="Theo dõi tôi trên Facebook"><i
                   class="fa-brands fa-facebook-f"></i></a>
-              <a class="btn-default btn-lg btn-icon" href="#" title="Follow me on Twitter"><i
-                  class="fa-brands fa-twitter"></i></a>
-              <a class="btn-default btn-lg btn-icon" href="#" title="Follow me on Google+"><i
-                  class="fa-brands fa-google-plus-g"></i></a>
-              <a class="btn-default btn-lg btn-icon" href="#" title="Follow me on Instagram"><i
+              <a class="btn-default btn-lg btn-icon" href="" title="Theo dõi tôi trên Github"><i
+                  class="fa-brands fa-github"></i></a>
+              <a class="btn-default btn-lg btn-icon" href="" title="Theo dõi tôi trên Instagram"><i
                   class="fa-brands fa-instagram"></i></a>
             </div>
           </div>
@@ -93,6 +94,9 @@
       <!-- ABOUT -->
       <section id="about">
         <div class="container">
+          <div class="text-center mb-4 title">
+            <h4>Mục tiêu & Thông tin</h4>
+          </div>
           <div class="card" data-aos="fade-up" data-aos-offset="10">
             <div class="row">
               <div class="col-lg-6 col-md-12">
@@ -210,20 +214,7 @@
           <div class="row">
             <div class="col-md-6 ml-auto mr-auto">
               <div class="text-center">
-                <h4 class="mb-4 title">Dự án</h4>
-              </div>
-              <div class="nav-align-center">
-                <ul class="nav nav-pills">
-                  <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#"><i class="fa-solid fa-laptop"></i></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#"><i class="fa-solid fa-image"></i></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#"><i class="fa-solid fa-camera"></i></a>
-                  </li>
-                </ul>
+                <h4 class="mb-4 title">Sản phẩm</h4>
               </div>
             </div>
           </div>
@@ -281,130 +272,6 @@
                             <div class="content">
                               <h4>Web Advertising Project</h4>
                               <p>Web Development</p>
-                            </div>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane" id="graphic-design">
-              <div class="ml-auto mr-auto">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="portfolio-image" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="#x">
-                        <figure class="effect">
-                          <img src="/images/template-images/graphic-design-1.jpg" alt="Image" class="img-fluid">
-                          <figcaption>
-                            <div class="content">
-                              <h4>Triangle Pattern</h4>
-                              <p>Graphic Design</p>
-                            </div>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
-                    <div class="portfolio-image" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="#x">
-                        <figure class="effect">
-                          <img src="/images/template-images/graphic-design-2.jpg" alt="Image" class="img-fluid">
-                          <figcaption>
-                            <div class="content">
-                              <h4>Abstract Umbrella</h4>
-                              <p>Graphic Design</p>
-                            </div>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="portfolio-image" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="#x">
-                        <figure class="effect">
-                          <img src="/images/template-images/graphic-design-3.jpg" alt="Image" class="img-fluid">
-                          <figcaption>
-                            <div class="content">
-                              <h4>Cube Surface Texture</h4>
-                              <p>Graphic Design</p>
-                            </div>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
-                    <div class="portfolio-image" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="#x">
-                        <figure class="effect">
-                          <img src="/images/template-images/graphic-design-4.jpg" alt="Image" class="img-fluid">
-                          <figcaption>
-                            <div class="content">
-                              <h4>Abstract Line</h4>
-                              <p>Graphic Design</p>
-                            </div>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane" id="photography">
-              <div class="ml-auto mr-auto">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="portfolio-image" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="#x">
-                        <figure class="effect">
-                          <img src="/images/template-images/photography-1.jpg" alt="Image" class="img-fluid">
-                          <figcaption>
-                            <div class="content">
-                              <h4>Triangle Pattern</h4>
-                              <p>Photography</p>
-                            </div>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
-                    <div class="portfolio-image" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="#x">
-                        <figure class="effect">
-                          <img src="/images/template-images/photography-3.jpg" alt="Image" class="img-fluid">
-                          <figcaption>
-                            <div class="content">
-                              <h4>Abstract Umbrella</h4>
-                              <p>Photography</p>
-                            </div>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="portfolio-image" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="#x">
-                        <figure class="effect">
-                          <img src="/images/template-images/photography-2.jpg" alt="Image" class="img-fluid">
-                          <figcaption>
-                            <div class="content">
-                              <h4>Cube Surface Texture</h4>
-                              <p>Photography</p>
-                            </div>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
-                    <div class="portfolio-image" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="#x">
-                        <figure class="effect">
-                          <img src="/images/template-images/photography-4.jpg" alt="Image" class="img-fluid">
-                          <figcaption>
-                            <div class="content">
-                              <h4>Abstract Line</h4>
-                              <p>Photography</p>
                             </div>
                           </figcaption>
                         </figure>
@@ -489,7 +356,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section id="achievement">
         <div class="container education">
           <div class="text-center mb-4 title">
             <h4>Thành tích</h4>
