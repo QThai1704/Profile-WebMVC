@@ -3,6 +3,8 @@ package nqt.cv.CVProjectJavaMVC.domain;
 import java.sql.Date;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -10,6 +12,7 @@ import jakarta.persistence.Table;
 @Table(name = "experiences")
 public class Experience {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private Date startDate;
     private Date endDate;

@@ -1,17 +1,31 @@
 package nqt.cv.CVProjectJavaMVC.controller.user;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import nqt.cv.CVProjectJavaMVC.domain.User;
+import nqt.cv.CVProjectJavaMVC.service.UserService;
 
 @Controller
 public class DashboardController {
+    private final UserService userService;
+
+    public DashboardController(UserService userService) {
+        this.userService = userService;
+    }
+
     @GetMapping("/user")
     public String getAdmin() {
         return "user/homepage/show";
     }
 
     @GetMapping("/user/message")
-    public String getMessage() {
+    public String getMessage(Model model) {
+        User user = userService.getUserByEmail("quangthai1704@gmail.com");
+        model.addAttribute("user", user);
         return "user/message";
     }
 
