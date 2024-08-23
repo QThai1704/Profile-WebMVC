@@ -1,11 +1,14 @@
 package nqt.cv.CVProjectJavaMVC.domain;
 
 import java.sql.Date;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -19,6 +22,9 @@ public class Experience {
     private String company;
     private String position;
     private String description;
+
+    @OneToMany(mappedBy = "experience")
+    private List<User> users;
 
     public Experience() {
     }

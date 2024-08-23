@@ -109,7 +109,7 @@
     </div>
     <div class="text-center mb-3">
       <a type="button" class="btn btn-outline-success" href="/user/profile">
-        Go Back Profiles
+        Quay về
       </a>
     </div>
 

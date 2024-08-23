@@ -1,10 +1,13 @@
 package nqt.cv.CVProjectJavaMVC.controller.user;
 
-import java.util.List;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import nqt.cv.CVProjectJavaMVC.domain.User;
 import nqt.cv.CVProjectJavaMVC.service.UserService;
@@ -26,7 +29,27 @@ public class DashboardController {
     public String getMessage(Model model) {
         User user = userService.getUserByEmail("quangthai1704@gmail.com");
         model.addAttribute("user", user);
+        model.addAttribute("changeDate", new SimpleDateFormat("dd-MM-yyyy").format(user.getDateOfBirth()));
         return "user/message";
+    }
+
+    @PostMapping("/user/message/update")
+    public String postMessage(@ModelAttribute("user") User user) {
+        User currentUser = userService.getUserByEmail("quangthai1704@gmail.com");
+        System.out.println(user.toString());
+        if (currentUser != null) {
+            currentUser.setFullName(user.getFullName());
+            currentUser.setAddress(user.getAddress());
+            currentUser.setEmail("quangthai1704@gmail.com");
+            currentUser.setDateOfBirth(user.getDateOfBirth());
+            currentUser.setLanguage(user.getLanguage());
+            currentUser.setGender(user.getGender());
+            currentUser.setPhoneNumber(user.getPhoneNumber());
+            currentUser.setCandidate(user.getCandidate());
+            // currentUser.setAvatar(user.getAvatar());
+            this.userService.saveUser(currentUser);
+        }
+        return "redirect:/user/message";
     }
 
     @GetMapping("/user/profile")
@@ -39,9 +62,9 @@ public class DashboardController {
         return "user/target";
     }
 
-    @GetMapping("/user/profile/about")
+    @GetMapping("/user/profile/society")
     public String getAbout() {
-        return "user/about";
+        return "user/society";
     }
 
     @GetMapping("/user/profile/skill")

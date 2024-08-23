@@ -1,9 +1,13 @@
 package nqt.cv.CVProjectJavaMVC.domain;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -14,6 +18,9 @@ public class Skill {
     private long id;
     private String name;
     private int level;
+
+    @OneToMany(mappedBy = "skill")
+    private List<User> users;
 
     public long getId() {
         return id;

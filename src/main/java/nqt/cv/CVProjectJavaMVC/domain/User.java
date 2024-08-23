@@ -6,6 +6,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -24,6 +26,91 @@ public class User {
     private String candidate;
     private String gender;
     private String password;
+
+    @ManyToOne
+    @JoinColumn(name = "roles")
+    private Role role;
+
+    @ManyToOne
+    @JoinColumn(name = "skills")
+    private Skill skill;
+
+    @ManyToOne
+    @JoinColumn(name = "achievements")
+    private Achievement achievement;
+
+    @ManyToOne
+    @JoinColumn(name = "experiences")
+    private Experience experience;
+
+    @ManyToOne
+    @JoinColumn(name = "portifolios")
+    private Portifolio portifolio;
+
+    @ManyToOne
+    @JoinColumn(name = "societies")
+    private Society society;
+
+    @ManyToOne
+    @JoinColumn(name = "targets")
+    private Target target;
+
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public Skill getSkill() {
+        return skill;
+    }
+
+    public void setSkill(Skill skill) {
+        this.skill = skill;
+    }
+
+    public Achievement getAchievement() {
+        return achievement;
+    }
+
+    public void setAchievement(Achievement achievement) {
+        this.achievement = achievement;
+    }
+
+    public Experience getExperience() {
+        return experience;
+    }
+
+    public void setExperience(Experience experience) {
+        this.experience = experience;
+    }
+
+    public Portifolio getPortifolio() {
+        return portifolio;
+    }
+
+    public void setPortifolio(Portifolio portifolio) {
+        this.portifolio = portifolio;
+    }
+
+    public Society getSociety() {
+        return society;
+    }
+
+    public void setSociety(Society society) {
+        this.society = society;
+    }
+
+    public Target getTarget() {
+        return target;
+    }
+
+    public void setTarget(Target target) {
+        this.target = target;
+    }
 
     public long getId() {
         return id;
@@ -137,4 +224,5 @@ public class User {
                 + ", dateOfBirth=" + dateOfBirth + ", avatar=" + avatar + ", language=" + language + ", phoneNumber="
                 + phoneNumber + ", candidate=" + candidate + ", gender=" + gender + ", password=" + password + "]";
     }
+
 }

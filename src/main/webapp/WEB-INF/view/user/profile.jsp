@@ -88,7 +88,7 @@
               <div class="card-body">
                 <h5 class="card-title">Mạng xã hội</h5>
                 <div class="text-center">
-                  <a href="/user/profile/about" class="btn btn-outline-success">Xem</a>
+                  <a href="/user/profile/society" class="btn btn-outline-success">Xem</a>
                 </div>
               </div>
             </div>

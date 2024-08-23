@@ -6,10 +6,9 @@
             </div>
             <div class="col-mb-3 text-center footer-icon">
                 <a href="#" class="facebook"><i class="ti-facebook pe-2"></i></a>
-                <a href="" class="twitter"><i class="ti-twitter-alt border-end border-start border-3 px-2"></i></a>
+                <a href="" class="twitter"><i class="ti-github border-end border-start border-3 px-2"></i></a>
                 <a href="" class="youtube"><i class="ti-youtube ps-2"></i></a>
             </div>
         </div>
     </div>
 </footer>
-

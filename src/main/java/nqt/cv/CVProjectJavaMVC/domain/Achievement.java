@@ -1,11 +1,15 @@
 package nqt.cv.CVProjectJavaMVC.domain;
 
 import java.sql.Date;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -19,6 +23,9 @@ public class Achievement {
     private Date endDate;
     private String detailDesc;
     private String shortDesc;
+
+    @OneToMany(mappedBy = "achievement")
+    private List<User> users;
 
     public Achievement() {
     }
