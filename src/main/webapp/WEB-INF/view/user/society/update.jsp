@@ -22,8 +22,8 @@
                 <div class="image">
                     <img src="/images/Hinh-Anime-Thien-Nhien-Dep-Cute-Nhat.jpg" alt="">
                 </div>
-                <form:form action="/user/profile/skill/update" method="POST" enctyep="form-data"
-                    modelAttribute="updateSkill">
+                <form:form action="/user/profile/society/update" method="POST" enctyep="form-data"
+                    modelAttribute="updateSociety">
                     <div class="container">
                         <div>
                             <div class="my-3">
@@ -40,12 +40,12 @@
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Mức độ (%):</label>
-                                    <form:input type="text" class="form-control" path="level" />
+                                    <form:input type="text" class="form-control" path="link" />
                                 </div>
                             </div>
                         </div>
                         <div class="text-center mb-3">
-                            <a type="button" class="btn btn-danger" href="/user/profile/skill">
+                            <a type="button" class="btn btn-danger" href="/user/profile/society">
                                 Hủy
                             </a>
                             <button type="submit" class="btn btn-success">

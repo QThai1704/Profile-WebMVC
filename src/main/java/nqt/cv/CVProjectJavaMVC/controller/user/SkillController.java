@@ -54,15 +54,15 @@ public class SkillController {
 
     // Delete
     @GetMapping("/user/profile/skill/delete/{id}")
-    public String getDeleteTarget(Model model, @PathVariable("id") long id) {
-        Skill target = skillService.getSkillById(id);
-        model.addAttribute("deleteSkill", target);
+    public String getDeleteSkill(Model model, @PathVariable("id") long id) {
+        Skill skill = skillService.getSkillById(id);
+        model.addAttribute("deleteSkill", skill);
         return "user/skill/delete";
     }
 
     @PostMapping("/user/profile/skill/delete")
-    public String postDeleteTarget(@ModelAttribute("deleteSkill") Skill deleteTarget) {
-        this.skillService.deleteSkillById(deleteTarget.getId());
+    public String postDeleteSkill(@ModelAttribute("deleteSkill") Skill deleteSkill) {
+        this.skillService.deleteSkillById(deleteSkill.getId());
         return "redirect:/user/profile/skill";
     }
 }

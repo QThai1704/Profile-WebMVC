@@ -58,4 +58,12 @@ public class Society {
     public String toString() {
         return "Society [id=" + id + ", name=" + name + ", link=" + link + "]";
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }

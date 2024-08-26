@@ -16,16 +16,13 @@
 
   <body>
     <jsp:include page="./layout/header.jsp" />
-    <div class="image">
-      <img src="/images/Hinh-Anime-Thien-Nhien-Dep-Cute-Nhat.jpg" alt="">
-    </div>
 
     <div class="profile">
       <div class="container mb-4">
         <div class="row">
           <div class="col-md-4">
             <div class="card">
-              <img src="/images/overview.jpg" class="card-img-top" width="400px">
+              <img src="/images/muc-tieu.jpg" class="card-img-top" width="400px">
               <div class="card-body">
                 <h5 class="card-title">Mục tiêu</h5>
                 <div class="text-center">
@@ -72,11 +69,11 @@
 
           <div class="col-md-4">
             <div class="card">
-              <img src="/images/contact.jpeg" class="card-img-top" alt="...">
+              <img src="/images/achievement.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Thành tích</h5>
                 <div class="text-center">
-                  <a href="/user/profile/contact" class="btn btn-outline-success">Xem</a>
+                  <a href="/user/profile/achievement" class="btn btn-outline-success">Xem</a>
                 </div>
               </div>
             </div>
@@ -84,7 +81,7 @@
 
           <div class="col-md-4">
             <div class="card">
-              <img src="/images/aboutnew.jpg" class="card-img-top">
+              <img src="/images/society.jpg" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title">Mạng xã hội</h5>
                 <div class="text-center">

@@ -87,8 +87,8 @@ public class DashboardController {
         return "user/experience";
     }
 
-    @GetMapping("/user/profile/contact")
+    @GetMapping("/user/profile/achievement")
     public String getContact() {
-        return "user/contact";
+        return "user/achievement/show";
     }
 }
