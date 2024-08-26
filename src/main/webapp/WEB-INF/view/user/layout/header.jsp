@@ -23,7 +23,7 @@
                             <a class="nav-link" href="/user/message">Thông tin</a>
                         </li>
                         <li class="nav-item">
-                            <h1>Xin chào, Admin</h1>
+                            <span>Xin chào, Admin</span>
                         </li>
                         <li class="nav-item">
                             <a type="button" class="btn btn-logout" id="btn-logout" href="/login">Đăng xuất</a>

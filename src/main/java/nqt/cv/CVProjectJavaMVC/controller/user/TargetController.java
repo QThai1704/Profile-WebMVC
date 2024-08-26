@@ -22,6 +22,7 @@ public class TargetController {
         this.userService = userService;
     }
 
+    // Create
     @PostMapping("/user/profile/target/create")
     public String postCreateTarget(@ModelAttribute("newTarget") Target newTarget) {
         User user = userService.getUserByEmail("quangthai1704@gmail.com");
@@ -32,6 +33,7 @@ public class TargetController {
         return "redirect:/user/profile/target";
     }
 
+    // Update
     @GetMapping("/user/profile/target/{id}")
     public String getUpdateTarget(Model model, @PathVariable("id") long id) {
         Target target = targetService.getTargetById(id);
@@ -43,10 +45,24 @@ public class TargetController {
     public String postUpdateTarget(@ModelAttribute("updateTarget") Target newTarget) {
         User user = this.userService.getUserByEmail("quangthai1704@gmail.com");
         Target currentTarget = this.targetService.getTargetById(newTarget.getId());
-        // currentTarget.setTitle(newTarget.getTitle());
+        currentTarget.setTitle(newTarget.getTitle());
         currentTarget.setDescription(newTarget.getDescription());
         currentTarget.setUser(user);
         this.targetService.saveTarget(currentTarget);
+        return "redirect:/user/profile/target";
+    }
+
+    // Delete
+    @GetMapping("/user/profile/target/delete/{id}")
+    public String getDeleteTarget(Model model, @PathVariable("id") long id) {
+        Target target = targetService.getTargetById(id);
+        model.addAttribute("deleteTarget", target);
+        return "user/target/delete";
+    }
+
+    @PostMapping("/user/profile/target/delete")
+    public String postDeleteTarget(@ModelAttribute("deleteTarget") Target deleteTarget) {
+        this.targetService.deleteTargetById(deleteTarget.getId());
         return "redirect:/user/profile/target";
     }
 }

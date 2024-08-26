@@ -27,5 +27,7 @@ public class TargetService {
         return targetRepository.findById(id);
     }
 
-    
+    public Target deleteTargetById(long id) {
+        return this.targetRepository.deleteById(id);
+    }
 }

@@ -22,31 +22,30 @@
                 <div class="image">
                     <img src="/images/Hinh-Anime-Thien-Nhien-Dep-Cute-Nhat.jpg" alt="">
                 </div>
-                <form:form action="/user/profile/target/update" method="POST" enctyep="form-data"
-                    modelAttribute="updateTarget">
+                <form:form action="/user/profile/skill/update" method="POST" enctyep="form-data"
+                    modelAttribute="updateSkill">
                     <div class="container">
                         <div>
                             <div class="my-3">
-                                <p class="h2 text-center">Chỉnh sửa mục tiêu cá nhân</p>
+                                <p class="h2 text-center">Chỉnh sửa kỹ năng cá nhân</p>
                             </div>
                             <div>
                                 <div class="mb-3 d-none">
                                     <label class="form-label">Id:</label>
-                                    <form:input type="text" class="form-control" path="id" />
+                                    <form:input type="hidden" class="form-control" path="id" />
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label">Tiêu đề:</label>
-                                    <form:input type="text" class="form-control" path="title" />
+                                    <label class="form-label">Tên kỹ năng:</label>
+                                    <form:input type="text" class="form-control" path="name" />
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label">Nội dung:</label>
-                                    <form:textarea class="form-control" rows="10" col="5" data-bs-spy="scroll"
-                                        path="description"></form:textarea>
+                                    <label class="form-label">Mức độ (%):</label>
+                                    <form:input type="text" class="form-control" path="level" />
                                 </div>
                             </div>
                         </div>
                         <div class="text-center mb-3">
-                            <a type="button" class="btn btn-danger" href="/user/profile/target">
+                            <a type="button" class="btn btn-danger" href="/user/profile/skill">
                                 Hủy
                             </a>
                             <button type="submit" class="btn btn-success">

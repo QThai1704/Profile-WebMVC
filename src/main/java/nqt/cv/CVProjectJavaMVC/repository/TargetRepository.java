@@ -14,4 +14,5 @@ public interface TargetRepository extends JpaRepository<Target, Long> {
 
     Target findById(long id);
 
+    Target deleteById(long id);
 }
