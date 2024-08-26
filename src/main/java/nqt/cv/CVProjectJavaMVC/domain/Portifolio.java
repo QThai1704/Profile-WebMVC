@@ -22,8 +22,9 @@ public class Portifolio {
     private String link;
     private String detailDesc;
 
-    @OneToMany(mappedBy = "portifolio")
-    private List<User> users;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public long getId() {
         return id;

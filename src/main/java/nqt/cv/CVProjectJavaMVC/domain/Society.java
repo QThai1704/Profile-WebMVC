@@ -20,8 +20,9 @@ public class Society {
     private String name;
     private String link;
 
-    @OneToMany(mappedBy = "society")
-    private List<User> users;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public long getId() {
         return id;

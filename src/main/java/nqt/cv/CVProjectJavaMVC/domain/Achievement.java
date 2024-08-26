@@ -24,8 +24,9 @@ public class Achievement {
     private String detailDesc;
     private String shortDesc;
 
-    @OneToMany(mappedBy = "achievement")
-    private List<User> users;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public Achievement() {
     }

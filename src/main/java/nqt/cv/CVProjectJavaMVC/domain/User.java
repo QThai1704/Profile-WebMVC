@@ -1,6 +1,7 @@
 package nqt.cv.CVProjectJavaMVC.domain;
 
 import java.sql.Date;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,6 +9,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -31,30 +33,23 @@ public class User {
     @JoinColumn(name = "roles")
     private Role role;
 
-    @ManyToOne
-    @JoinColumn(name = "skills")
-    private Skill skill;
+    @OneToMany(mappedBy = "user")
+    private List<Skill> skills;
 
-    @ManyToOne
-    @JoinColumn(name = "achievements")
-    private Achievement achievement;
+    @OneToMany(mappedBy = "user")
+    private List<Achievement> achievements;
 
-    @ManyToOne
-    @JoinColumn(name = "experiences")
-    private Experience experience;
+    @OneToMany(mappedBy = "user")
+    private List<Experience> experiences;
 
-    @ManyToOne
-    @JoinColumn(name = "portifolios")
-    private Portifolio portifolio;
+    @OneToMany(mappedBy = "user")
+    private List<Portifolio> portifolios;
 
-    @ManyToOne
-    @JoinColumn(name = "societies")
-    private Society society;
+    @OneToMany(mappedBy = "user")
+    private List<Society> societies;
 
-    @ManyToOne
-    @JoinColumn(name = "targets")
-    private Target target;
-
+    @OneToMany(mappedBy = "user")
+    private List<Target> targets;
 
     public Role getRole() {
         return role;
@@ -64,52 +59,52 @@ public class User {
         this.role = role;
     }
 
-    public Skill getSkill() {
-        return skill;
+    public List<Skill> getSkills() {
+        return skills;
     }
 
-    public void setSkill(Skill skill) {
-        this.skill = skill;
+    public void setSkills(List<Skill> skills) {
+        this.skills = skills;
     }
 
-    public Achievement getAchievement() {
-        return achievement;
+    public List<Achievement> getAchievements() {
+        return achievements;
     }
 
-    public void setAchievement(Achievement achievement) {
-        this.achievement = achievement;
+    public void setAchievements(List<Achievement> achievements) {
+        this.achievements = achievements;
     }
 
-    public Experience getExperience() {
-        return experience;
+    public List<Experience> getExperiences() {
+        return experiences;
     }
 
-    public void setExperience(Experience experience) {
-        this.experience = experience;
+    public void setExperiences(List<Experience> experiences) {
+        this.experiences = experiences;
     }
 
-    public Portifolio getPortifolio() {
-        return portifolio;
+    public List<Portifolio> getPortifolios() {
+        return portifolios;
     }
 
-    public void setPortifolio(Portifolio portifolio) {
-        this.portifolio = portifolio;
+    public void setPortifolios(List<Portifolio> portifolios) {
+        this.portifolios = portifolios;
     }
 
-    public Society getSociety() {
-        return society;
+    public List<Society> getSocieties() {
+        return societies;
     }
 
-    public void setSociety(Society society) {
-        this.society = society;
+    public void setSocieties(List<Society> societies) {
+        this.societies = societies;
     }
 
-    public Target getTarget() {
-        return target;
+    public List<Target> getTargets() {
+        return targets;
     }
 
-    public void setTarget(Target target) {
-        this.target = target;
+    public void setTargets(List<Target> targets) {
+        this.targets = targets;
     }
 
     public long getId() {

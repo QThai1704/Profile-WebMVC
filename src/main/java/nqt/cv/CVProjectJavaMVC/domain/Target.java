@@ -1,14 +1,12 @@
 package nqt.cv.CVProjectJavaMVC.domain;
 
-import java.util.List;
-
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -18,10 +16,13 @@ public class Target {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String title;
+
+    @Column(columnDefinition = "MEDIUMTEXT")
     private String description;
 
-    @OneToMany(mappedBy = "target")
-    private List<User> users;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public long getId() {
         return id;
@@ -59,6 +60,14 @@ public class Target {
     @Override
     public String toString() {
         return "Target [id=" + id + ", title=" + title + ", description=" + description + "]";
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
 }
