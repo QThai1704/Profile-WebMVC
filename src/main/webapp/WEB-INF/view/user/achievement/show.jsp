@@ -31,7 +31,8 @@
             </div>
           </div>
         </div>
-        <form class="modal" id="myModal">
+        <form:form class="modal" id="myModal" action="/user/profile/achievement/create" method="POST"
+          enctype="form-data" modelAttribute="newAchievement">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header">
@@ -39,12 +40,24 @@
               </div>
               <div class="modal-body">
                 <div class="mb-3">
-                  <label class="form-label">Tiêu đề:</label>
-                  <input type="text" class="form-control" />
+                  <label class="form-label">Tiêu đề</label>
+                  <form:input type="text" class="form-control" path="title" />
                 </div>
                 <div class="mb-3">
-                  <label class="form-label">Nội dung:</label>
-                  <textarea class="form-control" rows="10" data-bs-spy="scroll"></textarea>
+                  <label class="form-label">Nội dung chi tiết</label>
+                  <form:textarea class="form-control" rows="10" data-bs-spy="scroll" path="detailDesc"></form:textarea>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Nội dung tóm tắt</label>
+                  <form:input class="form-control" path="shortDesc"></form:input>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Thời gian bắt đầu</label>
+                  <form:input class="form-control" placeholder="ngày-tháng-năm" path="startDate" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Thời gian kết thúc</label>
+                  <form:input class="form-control" placeholder="ngày-tháng-năm" path="endDate" />
                 </div>
               </div>
               <div class="modal-footer">
@@ -53,7 +66,7 @@
               </div>
             </div>
           </div>
-        </form>
+        </form:form>
         <table class="table table-striped table-hover">
           <thead>
             <tr class="top-table">
@@ -66,26 +79,27 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <div class="text-center">
-                  <a type="button" class="btn btn-warning" href="">
-                    Chỉnh sửa
-                  </a>
-                  <a type="button" class="btn btn-danger" href="">
-                    Xóa
-                  </a>
-                </div>
-              </td>
-            </tr>
+            <c:forEach var="achievement" items="${achievements}">
+              <tr>
+                <td>${achievement.title}</td>
+                <td>${achievement.shortDesc}</td>
+                <td>${achievement.detailDesc}</td>
+                <td>${achievement.startDate}</td>
+                <td>${achievement.endDate}</td>
+                <td>
+                  <div class="text-center">
+                    <a type="button" class="btn btn-warning" href="/user/profile/achievement/${achievement.id}">
+                      Chỉnh sửa
+                    </a>
+                    <a type="button" class="btn btn-danger" href="/user/profile/achievement/delete/${achievement.id}">
+                      Xóa
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </c:forEach>
           </tbody>
         </table>
-
         <div class="text-center mb-3">
           <a type="button" class="btn btn-outline-success" href="/user/profile">
             Quay về

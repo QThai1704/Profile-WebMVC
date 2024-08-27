@@ -1,211 +1,181 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
-  <!DOCTYPE html>
-  <html lang="en">
+  <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    <!DOCTYPE html>
+    <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Nguyen Quang Thai</title>
-    <!-- THƯ VIỆN CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/client/css/CV.css">
-  </head>
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CV Nguyen Quang Thai</title>
+      <!-- THƯ VIỆN CSS -->
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+      <link rel="stylesheet" href="/css/bootstrap.css">
+      <link rel="stylesheet" href="/css/reset.css">
+      <link rel="stylesheet" href="/css/owl.carousel.min.css">
+      <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="/client/css/CV.css">
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var progressBar = document.getElementById("progress-bar-${skill.id}");
+          var skillPercent = progressBar.getAttribute("data-skill-percent");
+          progressBar.style.width = skillPercent + "%";
+        });
+      </script>
+    </head>
 
-  <body>
-    <!-- NAVBAR -->
-    <header>
-      <div class="profile-page sidebar-collapse">
-        <nav class="navbar navbar-expand-lg bg-nav fixed-top navbar-transparent">
-          <div class="container">
-            <a class="navbar-translate" href="#">Creative CV</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
-              aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navigation">
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="#about">Thông tin</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#skills">Kỹ năng</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#portfolio">Dự án</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#experience">Kinh nghiệm</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#achievement">Thành tích</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#contact">Liên hệ</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/">Trang chủ</a>
-                </li>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-
-    <div class="page-content">
-      <!-- HOME -->
-      <div class="profile-page">
-        <div class="overlay bg-cover">
-          <div class="home bg-cover d-flex align-items-center">
+    <body>
+      <!-- NAVBAR -->
+      <header>
+        <div class="profile-page sidebar-collapse">
+          <nav class="navbar navbar-expand-lg bg-nav fixed-top navbar-transparent">
             <div class="container">
-              <div class="content-center">
-                <div class="profile-image">
-                  <a href="#"><img src="/images/thai.jpg" alt="profile image"></a>
+              <a class="navbar-translate" href="#">Creative CV</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navigation">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">Thông tin</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#skills">Kỹ năng</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Dự án</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#experience">Kinh nghiệm</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#achievement">Thành tích</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Liên hệ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/">Trang chủ</a>
+                  </li>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <div class="page-content">
+        <!-- HOME -->
+        <div class="profile-page">
+          <div class="overlay bg-cover">
+            <div class="home bg-cover d-flex align-items-center">
+              <div class="container">
+                <div class="content-center">
+                  <div class="profile-image">
+                    <a href="#"><img src="/images/thai.jpg" alt="profile image"></a>
+                  </div>
+                  <h2>${user.fullName}</h2>
+                  <h3 class="category">${user.candidate}</h3>
+                  <a class="btn btn-success mr-2" href="#contact" data-aos="zoom-in">Liên hệ</a>
+                  <a class="btn btn-success" href="#" data-aos="zoom-in">Tải CV</a>
                 </div>
-                <h2>Nguyễn Quang Thái</h2>
-                <h3 class="category">Fresher Java</h3>
-                <a class="btn btn-success mr-2" href="#contact" data-aos="zoom-in">Liên hệ</a>
-                <a class="btn btn-success" href="#" data-aos="zoom-in">Tải CV</a>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="container">
+              <div class="button-container">
+                <a class="btn-default btn-lg btn-icon" href="" title="Theo dõi tôi trên Facebook"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+                <a class="btn-default btn-lg btn-icon" href="" title="Theo dõi tôi trên Github"><i
+                    class="fa-brands fa-github"></i></a>
+                <a class="btn-default btn-lg btn-icon" href="" title="Theo dõi tôi trên Instagram"><i
+                    class="fa-brands fa-instagram"></i></a>
               </div>
             </div>
           </div>
         </div>
-        <div class="section">
+
+        <!-- ABOUT -->
+        <section id="about">
           <div class="container">
-            <div class="button-container">
-              <a class="btn-default btn-lg btn-icon" href="" title="Theo dõi tôi trên Facebook"><i
-                  class="fa-brands fa-facebook-f"></i></a>
-              <a class="btn-default btn-lg btn-icon" href="" title="Theo dõi tôi trên Github"><i
-                  class="fa-brands fa-github"></i></a>
-              <a class="btn-default btn-lg btn-icon" href="" title="Theo dõi tôi trên Instagram"><i
-                  class="fa-brands fa-instagram"></i></a>
+            <div class="text-center mb-4 title">
+              <h4 class="title">Mục tiêu & Thông tin</h4>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ABOUT -->
-      <section id="about">
-        <div class="container">
-          <div class="text-center mb-4 title">
-            <h4>Mục tiêu & Thông tin</h4>
-          </div>
-          <div class="card" data-aos="fade-up" data-aos-offset="10">
-            <div class="row">
-              <div class="col-lg-6 col-md-12">
-                <div class="card-body">
-                  <h4 class="mt-0 title">Mục tiêu</h4>
-                  <p>Hello! I am Nguyen Quang Thai. Web Developer, Graphic Designer and Photographer.</p>
-                  <p>
-                    Creative CV is a HTML resume template for professionals. Built with Bootstrap 4, Now UI Kit and
-                    FontAwesome, this modern and responsive design template is perfect to showcase your portfolio,
-                    skills and experience.
-                    <a href="#">Learn More</a>
-                  </p>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-12">
-                <div class="card-body">
-                  <h4 class="mt-0 title">Thông tin</h4>
-                  <div class="row">
-                    <div class="col-sm-4"><strong class="text-uppercase">Tuổi:</strong></div>
-                    <div class="col-sm-8">22</div>
-                  </div>
-                  <div class="row mt-3">
-                    <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
-                    <div class="col-sm-8">quangthai170402@gmail.com</div>
-                  </div>
-                  <div class="row mt-3">
-                    <div class="col-sm-4"><strong class="text-uppercase">Số điện thoại:</strong></div>
-                    <div class="col-sm-8">0343282228</div>
-                  </div>
-                  <div class="row mt-3">
-                    <div class="col-sm-4"><strong class="text-uppercase">Địa chỉ:</strong></div>
-                    <div class="col-sm-8">8, Nguyen Trai street, Hai Duong</div>
-                  </div>
-                  <div class="row mt-3">
-                    <div class="col-sm-4"><strong class="text-uppercase">Ngôn ngữ sử dụng:</strong></div>
-                    <div class="col-sm-8">Tiếng Anh, Tiếng Việt</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SKILLS -->
-      <section id="skills">
-        <div class="container">
-          <div class="text-center">
-            <h4 class="mb-4 title">Kỹ năng</h4>
-          </div>
-          <div class="card" data-aos="fade-up" data-aos-offset="10" data-aos-anchor-placement="top-bottom">
-            <div class="card-body skill-items">
+            <div class="card" data-aos="fade-up" data-aos-offset="10">
               <div class="row">
-                <div class="col-md-6">
-                  <div class="progress-container">
-                    <span class="progress-badge">HTML</span>
-                    <div class="progress">
-                      <div class="progress-bar" data-aos="zoom-in-right" data-aos-duration="2000"
-                        data-aos-easing="ease-in-out" style="width: 80%;"></div>
-                      <span class="progress-value">80%</span>
-                    </div>
-                  </div>
-                  <div class="progress-container">
-                    <span class="progress-badge">JAVASCRIPT</span>
-                    <div class="progress">
-                      <div class="progress-bar" data-aos="zoom-in-right" data-aos-duration="2000"
-                        data-aos-easing="ease-in-out" style="width: 55%;"></div>
-                      <span class="progress-value">55%</span>
-                    </div>
-                  </div>
-                  <div class="progress-container">
-                    <span class="progress-badge">BOOTSTRAP</span>
-                    <div class="progress">
-                      <div class="progress-bar" data-aos="zoom-in-right" data-aos-duration="2000"
-                        data-aos-easing="ease-in-out" style="width: 75%;"></div>
-                      <span class="progress-value">75%</span>
-                    </div>
+                <div class="col-lg-6 col-md-12">
+                  <div class="card-body">
+                    <h4 class="mt-0 title">Mục tiêu</h4>
+                    <p>Hello! I am Nguyen Quang Thai. Web Developer, Graphic Designer and Photographer.</p>
+                    <p>
+                      Creative CV is a HTML resume template for professionals. Built with Bootstrap 4, Now UI Kit and
+                      FontAwesome, this modern and responsive design template is perfect to showcase your portfolio,
+                      skills and experience.
+                      <a href="#">Learn More</a>
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="progress-container">
-                    <span class="progress-badge">CSS</span>
-                    <div class="progress">
-                      <div class="progress-bar" data-aos="zoom-in-right" data-aos-duration="2000"
-                        data-aos-easing="ease-in-out" style="width: 70%;"></div>
-                      <span class="progress-value">70%</span>
+                <div class="col-lg-6 col-md-12">
+                  <div class="card-body">
+                    <h4 class="mt-0 title">Thông tin</h4>
+                    <div class="row">
+                      <div class="col-sm-4"><strong class="text-uppercase">Ngày sinh:</strong></div>
+                      <div class="col-sm-8">${user.dateOfBirth}</div>
                     </div>
-                  </div>
-                  <div class="progress-container">
-                    <span class="progress-badge">SASS</span>
-                    <div class="progress">
-                      <div class="progress-bar" data-aos="zoom-in-right" data-aos-duration="2000"
-                        data-aos-easing="ease-in-out" style="width: 10%;"></div>
-                      <span class="progress-value">10%</span>
+                    <div class="row mt-3">
+                      <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
+                      <div class="col-sm-8">${user.email}</div>
                     </div>
-                  </div>
-                  <div class="progress-container">
-                    <span class="progress-badge">PHOTOSHOP</span>
-                    <div class="progress">
-                      <div class="progress-bar" data-aos="zoom-in-right" data-aos-duration="2000"
-                        data-aos-easing="ease-in-out" style="width: 50%;"></div>
-                      <span class="progress-value">50%</span>
+                    <div class="row mt-3">
+                      <div class="col-sm-4"><strong class="text-uppercase">Số điện thoại:</strong></div>
+                      <div class="col-sm-8">${user.phoneNumber}</div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-sm-4"><strong class="text-uppercase">Địa chỉ:</strong></div>
+                      <div class="col-sm-8">${user.address}</div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-sm-4"><strong class="text-uppercase">Ngôn ngữ sử dụng:</strong></div>
+                      <div class="col-sm-8">${user.language}</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills">
+          <div class="container">
+            <div class="text-center">
+              <h4 class="mb-4 title">Kỹ năng</h4>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-offset="10" data-aos-anchor-placement="top-bottom">
+              <div class="card-body skill-items">
+                <div class="row">
+                  <c:forEach var="skill" items="${skills}">
+                    <div class="col-md-12">
+                      <div class="progress-container">
+                        <span class="progress-badge">${skill.name}</span>
+                        <div class="progress">
+                          <div class="progress-bar" id="progress-bar-${skill.id}" data-aos="zoom-in-right"
+                            data-aos-duration="2000" data-aos-easing="ease-in-out" data-skill-percent="${skill.level}">
+                          </div>
+                          <span class="progress-value">${skill.level}%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </c:forEach>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
       </section>
 
       <!-- PORTFOLIO -->
@@ -361,76 +331,25 @@
           <div class="text-center mb-4 title">
             <h4>Thành tích</h4>
           </div>
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-success" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body education-header">
-                  <p>2013 - 2015</p>
-                  <h5>Master's Degree</h5>
+          <c:forEach var="achievement" items="${achievements}">
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 bg-success" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body education-header">
+                    <p>${achievement.startDate} - ${achievement.endDate}</p>
+                    <h5>KHEN THƯỞNG</h5>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <h5>Master of Information Technology</h5>
-                  <p class="category">University of Computer Science</p>
-                  <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis,
-                    tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend
-                    primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros
-                    pulvinar
-                    curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie
-                    ultricies sollicitudin dui.</p>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body">
+                    <h5>${achievement.title}</h5>
+                    <p class="category">${achievement.shortDesc}</p>
+                    <p>${achievement.detailDesc}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class=" card">
-            <div class="row">
-              <div class="col-md-3 bg-success" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body education-header">
-                  <p>2009 - 2013</p>
-                  <h5>Bachelor's Degree</h5>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <h5>Bachelor of Computer Science</h5>
-                  <p class="category">University of Computer Science</p>
-                  <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam
-                    iaculis,
-                    tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel
-                    eleifend
-                    primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros
-                    pulvinar
-                    curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie
-                    ultricies sollicitudin dui.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-success" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body education-header">
-                  <p>2007 - 2009</p>
-                  <h5>High School</h5>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <h5>Science and Mathematics</h5>
-                  <p class="category">School of Secondary board</p>
-                  <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam
-                    iaculis,
-                    tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel
-                    eleifend
-                    primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros
-                    pulvinar
-                    curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie
-                    ultricies sollicitudin dui.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          </c:forEach>
         </div>
       </section>
 
@@ -511,41 +430,41 @@
           </div>
         </div>
       </section>
-    </div>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="container text-center">
-        <a href="#" class="facebook btn btn-link">
-          <i class="fa-brands fa-facebook-f fa-2x"></i>
-        </a>
-        <a href="#" class="twitter btn btn-link">
-          <i class="fa-brands fa-twitter fa-2x"></i>
-        </a>
-        <a href="#" class="google btn btn-link">
-          <i class="fa-brands fa-google-plus-g fa-2x"></i>
-        </a>
-        <a href="#" class="instagram btn btn-link">
-          <i class="fa-brands fa-instagram fa-2x"></i>
-        </a>
       </div>
-      <div class="title text-center">
-        <h4>MY PROJECT</h4>
-      </div>
-      <div class="text-center">
-        <p>&copy; Creative CV. All rights reserved.<br>Design - <a class="credit" href="#">TemplateFlip</a></p>
-      </div>
-    </footer>
 
-    <!-- THƯ VIỆN Javascript -->
-    <script src="/js/bootstrap.bundle.js"></script>
-    <script src="/js/jqeuery.js"></script>
-    <script src="/js/owl.carousel.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <script src="/client/js/CV.js"></script>
-  </body>
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="container text-center">
+          <a href="#" class="facebook btn btn-link">
+            <i class="fa-brands fa-facebook-f fa-2x"></i>
+          </a>
+          <a href="#" class="twitter btn btn-link">
+            <i class="fa-brands fa-twitter fa-2x"></i>
+          </a>
+          <a href="#" class="google btn btn-link">
+            <i class="fa-brands fa-google-plus-g fa-2x"></i>
+          </a>
+          <a href="#" class="instagram btn btn-link">
+            <i class="fa-brands fa-instagram fa-2x"></i>
+          </a>
+        </div>
+        <div class="title text-center">
+          <h4>MY PROJECT</h4>
+        </div>
+        <div class="text-center">
+          <p>&copy; Creative CV. All rights reserved.<br>Design - <a class="credit" href="#">TemplateFlip</a></p>
+        </div>
+      </footer>
 
-  </html>
+      <!-- THƯ VIỆN Javascript -->
+      <script src="/js/bootstrap.bundle.js"></script>
+      <script src="/js/jqeuery.js"></script>
+      <script src="/js/owl.carousel.min.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+      <script src="/client/js/CV.js"></script>
+    </body>
+
+    </html>

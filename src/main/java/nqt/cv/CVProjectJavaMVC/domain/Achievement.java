@@ -1,7 +1,5 @@
 package nqt.cv.CVProjectJavaMVC.domain;
 
-import java.sql.Date;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -18,8 +16,8 @@ public class Achievement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String title;
-    private Date startDate;
-    private Date endDate;
+    private String startDate;
+    private String endDate;
     @Column(columnDefinition = "MEDIUMTEXT")
     private String detailDesc;
     private String shortDesc;
@@ -31,7 +29,7 @@ public class Achievement {
     public Achievement() {
     }
 
-    public Achievement(long id, String title, Date startDate, Date endDate, String detailDesc, String shortDesc) {
+    public Achievement(long id, String title, String startDate, String endDate, String detailDesc, String shortDesc) {
         this.id = id;
         this.title = title;
         this.startDate = startDate;
@@ -56,19 +54,19 @@ public class Achievement {
         this.title = title;
     }
 
-    public Date getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 

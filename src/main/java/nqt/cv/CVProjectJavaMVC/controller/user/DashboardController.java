@@ -8,10 +8,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
+import nqt.cv.CVProjectJavaMVC.domain.Achievement;
 import nqt.cv.CVProjectJavaMVC.domain.Skill;
 import nqt.cv.CVProjectJavaMVC.domain.Target;
 import nqt.cv.CVProjectJavaMVC.domain.User;
 import nqt.cv.CVProjectJavaMVC.domain.Society;
+import nqt.cv.CVProjectJavaMVC.service.AchievementService;
 import nqt.cv.CVProjectJavaMVC.service.SkillService;
 import nqt.cv.CVProjectJavaMVC.service.TargetService;
 import nqt.cv.CVProjectJavaMVC.service.UserService;
@@ -23,13 +25,15 @@ public class DashboardController {
     private final TargetService targetService;
     private final SkillService skillService;
     private final SocietyService societyService;
+    private final AchievementService achievementService;
 
     public DashboardController(UserService userService, TargetService targetService, SkillService skillService,
-            SocietyService societyService) {
+            SocietyService societyService, AchievementService achievementService) {
         this.userService = userService;
         this.targetService = targetService;
         this.skillService = skillService;
         this.societyService = societyService;
+        this.achievementService = achievementService;
     }
 
     @GetMapping("/user")
@@ -88,7 +92,11 @@ public class DashboardController {
     }
 
     @GetMapping("/user/profile/achievement")
-    public String getContact() {
+    public String getContact(Model model) {
+        User user = this.userService.getUserByEmail("quangthai1704@gmail.com");
+        List<Achievement> achievements = this.achievementService.getAchievementsByUserId(user.getId());
+        model.addAttribute("achievements", achievements);
+        model.addAttribute("newAchievement", new Achievement());
         return "user/achievement/show";
     }
 }
