@@ -22,40 +22,30 @@
                 <div class="image">
                     <img src="/images/Hinh-Anime-Thien-Nhien-Dep-Cute-Nhat.jpg" alt="">
                 </div>
-                <form:form action="/user/profile/target/update" method="POST" enctyep="form-data"
-                    modelAttribute="updateTarget">
+                <form:form action="/user/profile/portifolio/delete" method="POST" modelAttribute="deletePortifolio">
                     <div class="container">
-                        <div>
+                        <div class="row">
                             <div class="my-3">
-                                <p class="h2 text-center">Chỉnh sửa mục tiêu cá nhân</p>
+                                <h2 class="text-danger">Cảnh báo!</h2>
                             </div>
-                            <div>
+                            <div class="d-flex justify-content-center">
                                 <div class="mb-3 d-none">
                                     <label class="form-label">Id:</label>
-                                    <form:input type="text" class="form-control" path="id" />
+                                    <form:input type="hidden" class="form-control" path="id" />
                                 </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Tiêu đề:</label>
-                                    <form:input type="text" class="form-control" path="title" />
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Nội dung:</label>
-                                    <form:textarea class="form-control" rows="10" data-bs-spy="scroll"
-                                        path="description"></form:textarea>
+                                <div class="alert alert-danger text-center" role=" alert">
+                                    Bạn có chắc chắn muốn xóa <span class="fw-bold">dự án</span> này không?
                                 </div>
                             </div>
-                        </div>
-                        <div class="text-center mb-3">
-                            <a type="button" class="btn btn-danger" href="/user/profile/target">
-                                Hủy
-                            </a>
-                            <button type="submit" class="btn btn-success">
-                                Lưu
-                            </button>
+                            <div class="col-12 text-center mb-5">
+                                <a type="button" class="btn btn-danger" href="/user/profile/portifolio">
+                                    Hủy
+                                </a>
+                                <button type="submit" class="btn btn-info" href="">Đồng ý</button>
+                            </div>
                         </div>
                     </div>
                 </form:form>
-
                 <jsp:include page="../layout/footer.jsp" />
 
                 <script src="/user/js/overview.js"></script>

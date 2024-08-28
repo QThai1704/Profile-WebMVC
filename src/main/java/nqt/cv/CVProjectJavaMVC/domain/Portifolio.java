@@ -18,7 +18,8 @@ public class Portifolio {
     private long id;
     private String name;
     private String image;
-    private String link;
+    private String github;
+    private String website;
     private String detailDesc;
 
     @ManyToOne
@@ -41,20 +42,28 @@ public class Portifolio {
         this.name = name;
     }
 
+    public String getGithub() {
+        return github;
+    }
+
+    public void setGithub(String github) {
+        this.github = github;
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
+    }
+
     public String getImage() {
         return image;
     }
 
     public void setImage(String image) {
         this.image = image;
-    }
-
-    public String getLink() {
-        return link;
-    }
-
-    public void setLink(String link) {
-        this.link = link;
     }
 
     public String getDetailDesc() {
@@ -68,18 +77,28 @@ public class Portifolio {
     public Portifolio() {
     }
 
-    public Portifolio(long id, String name, String image, String link, String detailDesc) {
+    public Portifolio(long id, String name, String image, String github, String website, String detailDesc, User user) {
         this.id = id;
         this.name = name;
         this.image = image;
-        this.link = link;
+        this.github = github;
+        this.website = website;
         this.detailDesc = detailDesc;
+        this.user = user;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override
     public String toString() {
-        return "Portifolio [id=" + id + ", name=" + name + ", image=" + image + ", link=" + link + ", detailDesc="
-                + detailDesc + "]";
+        return "Portifolio [id=" + id + ", name=" + name + ", image=" + image + ", github=" + github + ", website="
+                + website + ", detailDesc=" + detailDesc + ", user=" + user + "]";
     }
 
 }

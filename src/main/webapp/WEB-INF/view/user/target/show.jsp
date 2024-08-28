@@ -45,7 +45,8 @@
                 </div>
                 <div class="mb-3">
                   <label class="form-label">Nội dung:</label>
-                  <form:textarea class="form-control" rows="10" data-bs-spy="scroll" path="description"></form:textarea>
+                  <form:textarea class="form-control" rows="10" data-bs-spy="scroll" path="description" />
+                  <pre></pre>
                 </div>
               </div>
               <div class="modal-footer">
@@ -69,7 +70,10 @@
                 <td>
                   <h6>${target.title}</h6>
                 </td>
-                <td>${target.description}</td>
+                <td>
+                  <pre class="text-start"
+                    style="white-space: pre-wrap; overflow: hidden; line-height: 1.5;">${target.description}</pre>
+                </td>
                 <td>
                   <div class="text-center">
                     <a type="button" class="btn btn-warning" href="/user/profile/target/${target.id}">

@@ -9,11 +9,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
 import nqt.cv.CVProjectJavaMVC.domain.Achievement;
+import nqt.cv.CVProjectJavaMVC.domain.Portifolio;
 import nqt.cv.CVProjectJavaMVC.domain.Skill;
 import nqt.cv.CVProjectJavaMVC.domain.Target;
 import nqt.cv.CVProjectJavaMVC.domain.User;
 import nqt.cv.CVProjectJavaMVC.domain.Society;
 import nqt.cv.CVProjectJavaMVC.service.AchievementService;
+import nqt.cv.CVProjectJavaMVC.service.PortifolioService;
 import nqt.cv.CVProjectJavaMVC.service.SkillService;
 import nqt.cv.CVProjectJavaMVC.service.TargetService;
 import nqt.cv.CVProjectJavaMVC.service.UserService;
@@ -26,14 +28,16 @@ public class DashboardController {
     private final SkillService skillService;
     private final SocietyService societyService;
     private final AchievementService achievementService;
+    private final PortifolioService portifolioService;
 
     public DashboardController(UserService userService, TargetService targetService, SkillService skillService,
-            SocietyService societyService, AchievementService achievementService) {
+            SocietyService societyService, AchievementService achievementService, PortifolioService portifolioService) {
         this.userService = userService;
         this.targetService = targetService;
         this.skillService = skillService;
         this.societyService = societyService;
         this.achievementService = achievementService;
+        this.portifolioService = portifolioService;
     }
 
     @GetMapping("/user")
@@ -82,8 +86,12 @@ public class DashboardController {
     }
 
     @GetMapping("/user/profile/portifolio")
-    public String getPortifolio() {
-        return "user/portifolio";
+    public String getPortifolio(Model model) {
+        User user = this.userService.getUserByEmail("quangthai1704@gmail.com");
+        List<Portifolio> portifolios = this.portifolioService.getPortifoliosByUserId(user.getId());
+        model.addAttribute("portifolios", portifolios);
+        model.addAttribute("newPortifolio", new Portifolio());
+        return "user/portifolio/show";
     }
 
     @GetMapping("/user/profile/experience")
