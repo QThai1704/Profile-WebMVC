@@ -38,6 +38,10 @@
                                     <form:input type="text" class="form-control" path="title" />
                                 </div>
                                 <div class="mb-3">
+                                    <label class="form-label">Thể loại:</label>
+                                    <form:input type="text" class="form-control" path="type" />
+                                </div>
+                                <div class="mb-3">
                                     <label class="form-label">Nội dung tóm tắt</label>
                                     <form:input class="form-control" path="shortDesc"></form:input>
                                 </div>

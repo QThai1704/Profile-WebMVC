@@ -16,6 +16,7 @@ public class Achievement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String title;
+    private String type;
     private String startDate;
     private String endDate;
     @Column(columnDefinition = "MEDIUMTEXT")
@@ -29,14 +30,21 @@ public class Achievement {
     public Achievement() {
     }
 
-    public Achievement(long id, String title, String startDate, String endDate, String detailDesc, String shortDesc) {
+    
+
+    public Achievement(long id, String title, String type, String startDate, String endDate, String detailDesc,
+            String shortDesc, User user) {
         this.id = id;
         this.title = title;
+        this.type = type;
         this.startDate = startDate;
         this.endDate = endDate;
         this.detailDesc = detailDesc;
         this.shortDesc = shortDesc;
+        this.user = user;
     }
+
+
 
     public long getId() {
         return id;
@@ -88,8 +96,9 @@ public class Achievement {
 
     @Override
     public String toString() {
-        return "Achievement [id=" + id + ", title=" + title + ", startDate=" + startDate + ", endDate=" + endDate
-                + ", detailDesc=" + detailDesc + ", shortDesc=" + shortDesc + "]";
+        return "Achievement [id=" + id + ", title=" + title + ", type=" + type + ", startDate=" + startDate
+                + ", endDate=" + endDate + ", detailDesc=" + detailDesc + ", shortDesc=" + shortDesc + ", user=" + user
+                + "]";
     }
 
     public User getUser() {
@@ -98,6 +107,14 @@ public class Achievement {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
 }

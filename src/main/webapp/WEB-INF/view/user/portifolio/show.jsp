@@ -14,11 +14,13 @@
         <link rel="stylesheet" href="/css/reset.css">
         <link rel="stylesheet" href="/fonts/themify-icons/themify-icons.css">
         <link rel="stylesheet" href="/user/css/admin.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script>
           $(document).ready(() => {
             const avatarFile = $("#avatarFile");
             avatarFile.change(function (e) {
               const imgURL = URL.createObjectURL(e.target.files[0]);
+              console.log("Image URL:", imgURL);
               $("#avatarPreview").attr("src", imgURL);
               $("#avatarPreview").css({ "display": "block" });
             });
@@ -51,15 +53,16 @@
               <div class="modal-body">
                 <div class="mb-3">
                   <label class="form-label">Tên dự án:</label>
-                  <form:input type="text" class="form-control" path="name"/>
+                  <form:input type="text" class="form-control" path="name" />
                 </div>
                 <div class="mb-3">
                   <label class="form-label">Github:</label>
-                  <form:input type="text" class="form-control" placeholder="Đường dẫn tới Github" path="github"/>
+                  <form:input type="text" class="form-control" placeholder="Đường dẫn tới Github" path="github" />
                 </div>
                 <div class="mb-3">
                   <label class="form-label">Đường dẫn:</label>
-                  <form:input type="text" class="form-control" placeholder="Đường dẫn tới website (nếu có)" path="website"/>
+                  <form:input type="text" class="form-control" placeholder="Đường dẫn tới website (nếu có)"
+                    path="website" />
                 </div>
                 <div class="mb-3">
                   <label class="form-label">Mô tả dự án:</label>
@@ -67,10 +70,10 @@
                 </div>
                 <div class="mb-3 col-md-6 col-12">
                   <label for="avatarFile" class="form-label">Hình ảnh dự án:</label>
-                  <input class="form-control" type="file" id="avatarFile" accept=".png, .jpg, .jpeg" name="imgFile">
+                  <input class="form-control" type="file" id="avatarFile" accept=".png, .jpg, .jpeg" name="imgFile" />
                 </div>
                 <div class="col-12 mb-3">
-                  <img style="max-height: 250px; display: none;" alt=" avatar preview" id="avatarPreview">
+                  <img style="max-height: 250px; display: none;" alt="avatar preview" id="avatarPreview">
                 </div>
               </div>
               <div class="modal-footer">
@@ -86,20 +89,18 @@
               <th scope="col">Tên dự án</th>
               <th scope="col">Github</th>
               <th scope="col">Website</th>
-              <th scope="col">Mô tả dự án</th>
               <th scope="col">Hành động</th>
             </tr>
           </thead>
           <tbody>
             <c:forEach var="portifolio" items="${portifolios}">
               <tr>
-                <td>Tên</td>
-                <td>Link Github</td>
-                <td>Website</td>
-                <td>Mô tả dự án</td>
+                <td>${portifolio.name}</td>
+                <td><a href="${portifolio.github}">${portifolio.github}</a></td>
+                <td><a href="${portifolio.website}">${portifolio.website}</a></td>
                 <td>
                   <div class="text-center">
-                    <a type="button" class="btn btn-success" href="/user/profile/portifolio/${portifolio.id}">
+                    <a type="button" class="btn btn-success" href="/user/profile/portifolio/detail/${portifolio.id}">
                       Xem chi tiết
                     </a>
                     <a type="button" class="btn btn-warning" href="/user/profile/portifolio/${portifolio.id}">
@@ -123,11 +124,10 @@
 
         <jsp:include page="../layout/footer.jsp" />
 
-        <script src="/js/bootstrap.js"></script>
+        <script src="/js/bootstrap.bundle.js"></script>
         <script src="/user/js/skills.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
       </body>
-
       </html>

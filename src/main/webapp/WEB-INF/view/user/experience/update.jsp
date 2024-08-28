@@ -8,7 +8,7 @@
                 <meta charset="UTF-8">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Mục tiêu</title>
+                <title>Kinh nghiệm</title>
                 <link rel="stylesheet" href="/css/bootstrap.css">
                 <link rel="stylesheet" href="/user/css/admin.css">
                 <link rel="stylesheet" href="/css/reset.css">
@@ -22,12 +22,12 @@
                 <div class="image">
                     <img src="/images/Hinh-Anime-Thien-Nhien-Dep-Cute-Nhat.jpg" alt="">
                 </div>
-                <form:form action="/user/profile/target/update" method="POST" enctype="form-data"
-                    modelAttribute="updateTarget">
+                <form:form action="/user/profile/experience/update" method="POST" enctype="form-data"
+                    modelAttribute="updateExperience">
                     <div class="container">
                         <div>
                             <div class="my-3">
-                                <p class="h2 text-center">Chỉnh sửa mục tiêu cá nhân</p>
+                                <p class="h2 text-center">Chỉnh sửa kinh nghiệm cá nhân</p>
                             </div>
                             <div>
                                 <div class="mb-3 d-none">
@@ -35,18 +35,30 @@
                                     <form:input type="text" class="form-control" path="id" />
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label">Tiêu đề:</label>
-                                    <form:input type="text" class="form-control" path="title" />
+                                    <label class="form-label">Vị trí làm việc</label>
+                                    <form:input type="text" class="form-control" path="position" />
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label">Nội dung:</label>
+                                    <label class="form-label">Tên công ty</label>
+                                    <form:input class="form-control" path="company" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Thời gian bắt đầu</label>
+                                    <form:input class="form-control" placeholder="ngày-tháng-năm" path="startDate" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Thời gian kết thúc</label>
+                                    <form:input class="form-control" placeholder="ngày-tháng-năm" path="endDate" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Mô tả</label>
                                     <form:textarea class="form-control" rows="10" data-bs-spy="scroll"
                                         path="description"></form:textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="text-center mb-3">
-                            <a type="button" class="btn btn-danger" href="/user/profile/target">
+                            <a type="button" class="btn btn-danger" href="/user/profile/experience">
                                 Hủy
                             </a>
                             <button type="submit" class="btn btn-success">

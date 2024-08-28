@@ -7,7 +7,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>CV Nguyen Quang Thai</title>
+      <title>Chi tiết CV</title>
       <!-- THƯ VIỆN CSS -->
       <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -18,13 +18,6 @@
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
       <!-- Custom CSS -->
       <link rel="stylesheet" href="/client/css/CV.css">
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          var progressBar = document.getElementById("progress-bar-${skill.id}");
-          var skillPercent = progressBar.getAttribute("data-skill-percent");
-          progressBar.style.width = skillPercent + "%";
-        });
-      </script>
     </head>
 
     <body>
@@ -88,11 +81,11 @@
           <div class="section">
             <div class="container">
               <div class="button-container">
-                <a class="btn-default btn-lg btn-icon" href="" title="Theo dõi tôi trên Facebook"><i
-                    class="fa-brands fa-facebook-f"></i></a>
-                <a class="btn-default btn-lg btn-icon" href="" title="Theo dõi tôi trên Github"><i
+                <a class="btn-default btn-lg btn-icon" href="${facebook}" title="Theo dõi tôi trên Facebook">
+                  <i class="fa-brands fa-facebook-f"></i></a>
+                <a class="btn-default btn-lg btn-icon" href="${github}" title="Theo dõi tôi trên Github"><i
                     class="fa-brands fa-github"></i></a>
-                <a class="btn-default btn-lg btn-icon" href="" title="Theo dõi tôi trên Instagram"><i
+                <a class="btn-default btn-lg btn-icon" href="${instagram}" title="Theo dõi tôi trên Instagram"><i
                     class="fa-brands fa-instagram"></i></a>
               </div>
             </div>
@@ -110,13 +103,13 @@
                 <div class="col-lg-6 col-md-12">
                   <div class="card-body">
                     <h4 class="mt-0 title">Mục tiêu</h4>
-                    <p>Hello! I am Nguyen Quang Thai. Web Developer, Graphic Designer and Photographer.</p>
-                    <p>
-                      Creative CV is a HTML resume template for professionals. Built with Bootstrap 4, Now UI Kit and
-                      FontAwesome, this modern and responsive design template is perfect to showcase your portfolio,
-                      skills and experience.
-                      <a href="#">Learn More</a>
-                    </p>
+                    <c:forEach var="target" items="${targets}">
+                      <p>${target.title}</p>
+                      <p>
+                      <pre class="text-start"
+                        style="white-space: pre-wrap; overflow: hidden; line-height: 1.5;">${target.description}</pre>
+                      </p>
+                    </c:forEach>
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
@@ -124,7 +117,7 @@
                     <h4 class="mt-0 title">Thông tin</h4>
                     <div class="row">
                       <div class="col-sm-4"><strong class="text-uppercase">Ngày sinh:</strong></div>
-                      <div class="col-sm-8">${user.dateOfBirth}</div>
+                      <div class="col-sm-8">${changeDate}</div>
                     </div>
                     <div class="row mt-3">
                       <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
@@ -159,6 +152,13 @@
               <div class="card-body skill-items">
                 <div class="row">
                   <c:forEach var="skill" items="${skills}">
+                    <script>
+                      document.addEventListener("DOMContentLoaded", function () {
+                        var progressBar = document.getElementById("progress-bar-${skill.id}");
+                        var skillPercent = progressBar.getAttribute("data-skill-percent");
+                        progressBar.style.width = skillPercent + "%";
+                      });
+                    </script>
                     <div class="col-md-12">
                       <div class="progress-container">
                         <span class="progress-badge">${skill.name}</span>
@@ -193,19 +193,21 @@
               <div class="ml-auto mr-auto">
                 <div class="row">
                   <div class="col-md-6">
-                    <div class="portfolio-image" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                      <a href="#x">
-                        <figure class="effect">
-                          <img src="/images/template-images/project-1.jpg" class="img-fluid" alt="Image">
-                          <figcaption>
-                            <div class="content">
-                              <h4>Recent Project</h4>
-                              <p>Web Development</p>
-                            </div>
-                          </figcaption>
-                        </figure>
-                      </a>
-                    </div>
+                    <c:forEach var="portifolio" items="${portifolios}">
+                      <div class="portfolio-image" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                        <a href="#x">
+                          <figure class="effect"">
+                            <img src="/images/profile/${portifolio.image}" class="img-fluid" alt="Image">
+                            <figcaption>
+                              <div class="content">
+                                <h4>${portifolio.name}</h4>
+                                <p>Web Development</p>
+                              </div>
+                            </figcaption>
+                          </figure>
+                        </a>
+                      </div>
+                    </c:forEach>
                     <div class="portfolio-image" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                       <a href="#x">
                         <figure class="effect">
@@ -261,69 +263,25 @@
           <div class="text-center mb-4 title">
             <h4>Kinh nghiệm làm việc</h4>
           </div>
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-success" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body work-experience-header">
-                  <p>March 2016 - Present</p>
-                  <h5>CreativeM</h5>
+          <c:forEach var="experience" items="${experiences}">
+            <div class="card">
+              <div class="row">
+                <div class="col-md-3 bg-success" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body work-experience-header">
+                    <p>${experience.startDate} - ${experience.endDate}</p>
+                    <h5>${experience.position}</h5>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <h5>Front End Developer</h5>
-                  <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis,
-                    tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend
-                    primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros
-                    pulvinar
-                    curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie
-                    ultricies sollicitudin dui.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-success" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body work-experience-header">
-                  <p>April 2014 - March 2016</p>
-                  <h5>WebNote</h5>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <h5>Web Developer</h5>
-                  <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis,
-                    tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend
-                    primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros
-                    pulvinar
-                    curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie
-                    ultricies sollicitudin dui.</p>
+                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                  <div class="card-body">
+                    <h5>${experience.company}</h5>
+                    <pre class="text-start"
+                    style="white-space: pre-wrap; overflow: hidden; line-height: 1.5;">${experience.description}</pre>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-success" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body work-experience-header">
-                  <p>April 2013 - February 2014</p>
-                  <h5>WEBM</h5>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <h5>Intern</h5>
-                  <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis,
-                    tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend
-                    primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros
-                    pulvinar
-                    curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie
-                    ultricies sollicitudin dui.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          </c:forEach>
         </div>
       </section>
       <section id="achievement">
@@ -337,7 +295,7 @@
                 <div class="col-md-3 bg-success" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
                   <div class="card-body education-header">
                     <p>${achievement.startDate} - ${achievement.endDate}</p>
-                    <h5>KHEN THƯỞNG</h5>
+                    <h5 class="text-uppercase">${achievement.type}</h5>
                   </div>
                 </div>
                 <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
@@ -438,11 +396,8 @@
           <a href="#" class="facebook btn btn-link">
             <i class="fa-brands fa-facebook-f fa-2x"></i>
           </a>
-          <a href="#" class="twitter btn btn-link">
-            <i class="fa-brands fa-twitter fa-2x"></i>
-          </a>
           <a href="#" class="google btn btn-link">
-            <i class="fa-brands fa-google-plus-g fa-2x"></i>
+            <i class="fa-brands fa-github fa-2x"></i>
           </a>
           <a href="#" class="instagram btn btn-link">
             <i class="fa-brands fa-instagram fa-2x"></i>
@@ -452,7 +407,7 @@
           <h4>MY PROJECT</h4>
         </div>
         <div class="text-center">
-          <p>&copy; Creative CV. All rights reserved.<br>Design - <a class="credit" href="#">TemplateFlip</a></p>
+          <p>&copy; Creative CV. All rights reserved.</p>
         </div>
       </footer>
 

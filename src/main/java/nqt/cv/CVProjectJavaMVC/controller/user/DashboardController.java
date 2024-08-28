@@ -9,12 +9,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
 import nqt.cv.CVProjectJavaMVC.domain.Achievement;
+import nqt.cv.CVProjectJavaMVC.domain.Experience;
 import nqt.cv.CVProjectJavaMVC.domain.Portifolio;
 import nqt.cv.CVProjectJavaMVC.domain.Skill;
 import nqt.cv.CVProjectJavaMVC.domain.Target;
 import nqt.cv.CVProjectJavaMVC.domain.User;
 import nqt.cv.CVProjectJavaMVC.domain.Society;
 import nqt.cv.CVProjectJavaMVC.service.AchievementService;
+import nqt.cv.CVProjectJavaMVC.service.ExperienceService;
 import nqt.cv.CVProjectJavaMVC.service.PortifolioService;
 import nqt.cv.CVProjectJavaMVC.service.SkillService;
 import nqt.cv.CVProjectJavaMVC.service.TargetService;
@@ -29,19 +31,24 @@ public class DashboardController {
     private final SocietyService societyService;
     private final AchievementService achievementService;
     private final PortifolioService portifolioService;
+    private final ExperienceService experienceService;
 
     public DashboardController(UserService userService, TargetService targetService, SkillService skillService,
-            SocietyService societyService, AchievementService achievementService, PortifolioService portifolioService) {
+            SocietyService societyService, AchievementService achievementService, PortifolioService portifolioService,
+            ExperienceService experienceService) {
         this.userService = userService;
         this.targetService = targetService;
         this.skillService = skillService;
         this.societyService = societyService;
         this.achievementService = achievementService;
         this.portifolioService = portifolioService;
+        this.experienceService = experienceService;
     }
 
     @GetMapping("/user")
-    public String getAdmin() {
+    public String getUser(Model model) {
+        User user = this.userService.getUserByEmail("quangthai1704@gmail.com");
+        model.addAttribute("user", user);
         return "user/homepage/show";
     }
 
@@ -50,18 +57,21 @@ public class DashboardController {
         User user = this.userService.getUserByEmail("quangthai1704@gmail.com");
         model.addAttribute("user", user);
         model.addAttribute("changeDate", new SimpleDateFormat("dd-MM-yyyy").format(user.getDateOfBirth()));
-        return "user/message";
+        return "user/homepage/message";
     }
 
     @GetMapping("/user/profile")
-    public String getProfile() {
-        return "user/profile";
+    public String getProfile(Model model) {
+        User user = this.userService.getUserByEmail("quangthai1704@gmail.com");
+        model.addAttribute("user", user);
+        return "user/homepage/profile";
     }
 
     @GetMapping("/user/profile/target")
     public String getTarget(Model model) {
         User user = this.userService.getUserByEmail("quangthai1704@gmail.com");
         List<Target> targets = this.targetService.getTargetByUserId(user.getId());
+        model.addAttribute("user", user);
         model.addAttribute("targets", targets);
         model.addAttribute("newTarget", new Target());
         return "user/target/show";
@@ -71,6 +81,7 @@ public class DashboardController {
     public String getAbout(Model model) {
         User user = this.userService.getUserByEmail("quangthai1704@gmail.com");
         List<Society> societies = this.societyService.getSocietiesByUserId(user.getId());
+        model.addAttribute("user", user);
         model.addAttribute("societies", societies);
         model.addAttribute("newSociety", new Society());
         return "user/society/show";
@@ -80,6 +91,7 @@ public class DashboardController {
     public String getSkill(Model model) {
         User user = this.userService.getUserByEmail("quangthai1704@gmail.com");
         List<Skill> skills = this.skillService.getSkillsByUserId(user.getId());
+        model.addAttribute("user", user);
         model.addAttribute("skills", skills);
         model.addAttribute("newSkill", new Skill());
         return "user/skill/show";
@@ -89,20 +101,27 @@ public class DashboardController {
     public String getPortifolio(Model model) {
         User user = this.userService.getUserByEmail("quangthai1704@gmail.com");
         List<Portifolio> portifolios = this.portifolioService.getPortifoliosByUserId(user.getId());
+        model.addAttribute("user", user);
         model.addAttribute("portifolios", portifolios);
         model.addAttribute("newPortifolio", new Portifolio());
         return "user/portifolio/show";
     }
 
     @GetMapping("/user/profile/experience")
-    public String getExperience() {
-        return "user/experience";
+    public String getExperience(Model model) {
+        User user = this.userService.getUserByEmail("quangthai1704@gmail.com");
+        List<Experience> experiences = this.experienceService.getExperiencesByUserId(user.getId());
+        model.addAttribute("user", user);
+        model.addAttribute("experiences", experiences);
+        model.addAttribute("newExperience", new Experience());
+        return "user/experience/show";
     }
 
     @GetMapping("/user/profile/achievement")
     public String getContact(Model model) {
         User user = this.userService.getUserByEmail("quangthai1704@gmail.com");
         List<Achievement> achievements = this.achievementService.getAchievementsByUserId(user.getId());
+        model.addAttribute("user", user);
         model.addAttribute("achievements", achievements);
         model.addAttribute("newAchievement", new Achievement());
         return "user/achievement/show";

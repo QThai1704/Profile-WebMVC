@@ -23,7 +23,7 @@
                             <a class="nav-link" href="/user/message">Thông tin</a>
                         </li>
                         <li class="nav-item">
-                            <span>Xin chào, Admin</span>
+                            <span>Xin chào, ${user.fullName}</span>
                         </li>
                         <li class="nav-item">
                             <a type="button" class="btn btn-logout" id="btn-logout" href="/login">Đăng xuất</a>

@@ -1,15 +1,13 @@
 package nqt.cv.CVProjectJavaMVC.domain;
 
-import java.sql.Date;
-import java.util.List;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -22,6 +20,7 @@ public class Experience {
     private String endDate;
     private String company;
     private String position;
+    @Column(columnDefinition = "MEDIUMTEXT")
     private String description;
 
     @ManyToOne
@@ -92,5 +91,13 @@ public class Experience {
     public String toString() {
         return "Experience [id=" + id + ", startDate=" + startDate + ", endDate=" + endDate + ", company=" + company
                 + ", position=" + position + ", description=" + description + "]";
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

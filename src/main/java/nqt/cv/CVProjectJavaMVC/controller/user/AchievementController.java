@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import nqt.cv.CVProjectJavaMVC.domain.Achievement;
-import nqt.cv.CVProjectJavaMVC.domain.Skill;
 import nqt.cv.CVProjectJavaMVC.domain.User;
 import nqt.cv.CVProjectJavaMVC.service.AchievementService;
 import nqt.cv.CVProjectJavaMVC.service.UserService;
@@ -28,6 +27,7 @@ public class AchievementController {
     public String postCreateAchievement(@ModelAttribute("newAchievement") Achievement newAchievement) {
         User user = this.userService.getUserByEmail("quangthai1704@gmail.com");
         newAchievement.setTitle(newAchievement.getTitle());
+        newAchievement.setType(newAchievement.getType());
         newAchievement.setDetailDesc(newAchievement.getDetailDesc());
         newAchievement.setShortDesc(newAchievement.getShortDesc());
         newAchievement.setStartDate(newAchievement.getStartDate());
@@ -50,6 +50,7 @@ public class AchievementController {
         User user = this.userService.getUserByEmail("quangthai1704@gmail.com");
         Achievement currentAchievement = this.achievementService.getAchievementById(newAchievement.getId());
         currentAchievement.setTitle(newAchievement.getTitle());
+        currentAchievement.setType(newAchievement.getType());
         currentAchievement.setDetailDesc(newAchievement.getDetailDesc());
         currentAchievement.setShortDesc(newAchievement.getShortDesc());
         currentAchievement.setStartDate(newAchievement.getStartDate());

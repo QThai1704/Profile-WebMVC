@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col text-center">
               <button type="button" class="btn btn-outline-success btn-add" data-toggle="modal" data-target="#myModal">
-                Thêm mục tiêu
+                Thêm kỹ năng
               </button>
             </div>
           </div>

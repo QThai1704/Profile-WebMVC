@@ -19,7 +19,7 @@
         </head>
 
         <body>
-          <jsp:include page="./layout/header.jsp" />
+          <jsp:include page="../layout/header.jsp" />
           <div class="image">
             <img src="/images/Hinh-Anime-Thien-Nhien-Dep-Cute-Nhat.jpg" alt="">
           </div>
@@ -159,7 +159,7 @@
             </div>
           </form:form>
 
-          <jsp:include page="./layout/footer.jsp" />
+          <jsp:include page="../layout/footer.jsp" />
           <script src="/user/js/messages.js"></script>
           <script src="/js/bootstrap.js"></script>
           <script src="/js/bootstrap.bundle.js"></script>

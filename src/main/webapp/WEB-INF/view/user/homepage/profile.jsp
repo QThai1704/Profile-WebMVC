@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <jsp:include page="./layout/header.jsp" />
+    <jsp:include page="../layout/header.jsp" />
 
     <div class="profile">
       <div class="container mb-4">
@@ -94,7 +94,7 @@
       </div>
     </div>
 
-    <jsp:include page="./layout/footer.jsp" />
+    <jsp:include page="../layout/footer.jsp" />
 
     <script src="/user/js/admin.js"></script>
     <script src="/js/bootstrap.js"></script>

@@ -1,5 +1,6 @@
 package nqt.cv.CVProjectJavaMVC.controller.user;
 
+import org.springframework.security.access.method.P;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,15 +22,25 @@ public class PortifolioController {
     private final UserService userService;
     private final UploadService uploadService;
 
-    public PortifolioController(PortifolioService portifolioService, UserService userService, UploadService uploadService) {
+    public PortifolioController(PortifolioService portifolioService, UserService userService,
+            UploadService uploadService) {
         this.portifolioService = portifolioService;
         this.userService = userService;
         this.uploadService = uploadService;
     }
 
+    // Detail
+    @GetMapping("/user/profile/portifolio/detail/{id}")
+    public String getDetailPortifolio(Model model, @PathVariable("id") long id) {
+        Portifolio portifolio = this.portifolioService.getPortifolioById(id);
+        model.addAttribute("detailPortifolio", portifolio);
+        return "user/portifolio/detail";
+    }
+
     // Create
     @PostMapping("/user/profile/portifolio/create")
-    public String postCreatePortifolio(@ModelAttribute("newPortifolio") Portifolio newPortifolio, @RequestParam("imgFile") MultipartFile image) {
+    public String postCreatePortifolio(@ModelAttribute("newPortifolio") Portifolio newPortifolio,
+            @RequestParam("imgFile") MultipartFile image) {
         User user = this.userService.getUserByEmail("quangthai1704@gmail.com");
         String fileName = this.uploadService.saveUploadFile(image, "profile");
         newPortifolio.setName(newPortifolio.getName());
@@ -42,39 +53,43 @@ public class PortifolioController {
         return "redirect:/user/profile/portifolio";
     }
 
-    // // Update
-    // @GetMapping("/user/profile/society/{id}")
-    // public String getUpdateSociety(Model model, @PathVariable("id") long id) {
-    // Society society = this.societyService.getSocietyById(id);
-    // model.addAttribute("updateSociety", society);
-    // return "user/society/update";
-    // }
+    // Update
+    @GetMapping("/user/profile/portifolio/{id}")
+    public String getUpdatePortifolio(Model model, @PathVariable("id") long id) {
+        Portifolio portifolio = this.portifolioService.getPortifolioById(id);
+        model.addAttribute("updatePortifolio", portifolio);
+        return "user/portifolio/update";
+    }
 
-    // @PostMapping("/user/profile/society/update")
-    // public String postUpdateSociety(@ModelAttribute("updateSociety") Society
-    // newSociety) {
-    // User user = this.userService.getUserByEmail("quangthai1704@gmail.com");
-    // Society currentSociety =
-    // this.societyService.getSocietyById(newSociety.getId());
-    // currentSociety.setName(newSociety.getName());
-    // currentSociety.setLink(newSociety.getLink());
-    // currentSociety.setUser(user);
-    // this.societyService.saveSociety(currentSociety);
-    // return "redirect:/user/profile/society";
-    // }
+    @PostMapping("/user/profile/portifolio/update")
+    public String postUpdatePortifolio(@ModelAttribute("updatePortifolio") Portifolio updatePortifolio,
+            @RequestParam("updateImgFile") MultipartFile image) {
+        User user = this.userService.getUserByEmail("quangthai1704@gmail.com");
+        Portifolio currentPortifolio = this.portifolioService.getPortifolioById(updatePortifolio.getId());
+        if (!image.isEmpty()) {
+            String fileName = this.uploadService.saveUploadFile(image, "profile");
+            currentPortifolio.setImage(fileName);
+        }
+        currentPortifolio.setName(updatePortifolio.getName());
+        currentPortifolio.setGithub(updatePortifolio.getGithub());
+        currentPortifolio.setWebsite(updatePortifolio.getWebsite());
+        currentPortifolio.setDetailDesc(updatePortifolio.getDetailDesc());
+        currentPortifolio.setUser(user);
+        this.portifolioService.savePortifolio(currentPortifolio);
+        return "redirect:/user/profile/portifolio";
+    }
 
-    // // Delete
-    // @GetMapping("/user/profile/society/delete/{id}")
-    // public String getDeleteSociety(Model model, @PathVariable("id") long id) {
-    // Society society = societyService.getSocietyById(id);
-    // model.addAttribute("deleteSociety", society);
-    // return "user/society/delete";
-    // }
+    // Delete
+    @GetMapping("/user/profile/portifolio/delete/{id}")
+    public String getDeletePortifolio(Model model, @PathVariable("id") long id) {
+        Portifolio portifolio = portifolioService.getPortifolioById(id);
+        model.addAttribute("deletePortifolio", portifolio);
+        return "user/portifolio/delete";
+    }
 
-    // @PostMapping("/user/profile/society/delete")
-    // public String postDeleteSociety(@ModelAttribute("deleteSociety") Society
-    // deleteSociety) {
-    // this.societyService.deleteSocietyById(deleteSociety.getId());
-    // return "redirect:/user/profile/society";
-    // }
+    @PostMapping("/user/profile/portifolio/delete")
+    public String postDeletePortifolio(@ModelAttribute("deletePortifolio") Portifolio deletePortifolio) {
+        this.portifolioService.deletePortifolioById(deletePortifolio.getId());
+        return "redirect:/user/profile/portifolio";
+    }
 }

@@ -2,6 +2,7 @@ package nqt.cv.CVProjectJavaMVC.domain;
 
 import java.util.List;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,6 +21,7 @@ public class Portifolio {
     private String image;
     private String github;
     private String website;
+    @Column(columnDefinition = "MEDIUMTEXT")
     private String detailDesc;
 
     @ManyToOne

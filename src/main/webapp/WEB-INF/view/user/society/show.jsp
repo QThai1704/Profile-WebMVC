@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col text-center">
               <button type="button" class="btn btn-outline-success btn-add" data-toggle="modal" data-target="#myModal">
-                Thêm mục tiêu
+                Thêm liên hệ
               </button>
             </div>
           </div>
@@ -66,8 +66,11 @@
           <tbody>
             <c:forEach var="society" items="${societies}">
               <tr>
-                <td>${society.name}</td>
-                <td>${society.link}</td>
+                <td>
+                  ${society.name}
+                </td>
+                <td>
+                  <a href="${society.link}">${society.link}</a></td>
                 <td>
                   <div class="text-center">
                     <a type="button" class="btn btn-warning" href="/user/profile/society/${society.id}">

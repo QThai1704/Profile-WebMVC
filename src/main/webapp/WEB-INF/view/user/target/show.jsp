@@ -46,7 +46,6 @@
                 <div class="mb-3">
                   <label class="form-label">Nội dung:</label>
                   <form:textarea class="form-control" rows="10" data-bs-spy="scroll" path="description" />
-                  <pre></pre>
                 </div>
               </div>
               <div class="modal-footer">
@@ -69,6 +68,9 @@
               <tr>
                 <td>
                   <h6>${target.title}</h6>
+                </td>
+                <td>
+                  ${target.type}
                 </td>
                 <td>
                   <pre class="text-start"
