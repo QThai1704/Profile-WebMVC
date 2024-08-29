@@ -25,11 +25,11 @@
                 <div class="row login-main border text-center">
                     <div class="col-sm-4 login-title">
                         <h1 class="h1">Creative CV</h1>
-                        <h3 class="h3" id="paragraph">Login admin account</h3>
+                        <h3 class="h3" id="paragraph">Đăng nhập tài khoản người dùng</h3>
                     </div>
                     <div class="col-sm-8" id="login-contact">
                         <div class="col-md">
-                            <h1 class="h1">Login</h1>
+                            <h1 class="h1">Đăng nhập</h1>
                             <div class="col col-image">
                                 <img src="/images/admin.jpg"></img>
                             </div>
@@ -38,29 +38,30 @@
                         <div class="col-md login-information">
                             <div class="input-group flex-nowrap input-group-lg mt-3 col-md">
                                 <span class="input-group-text" id="addon-wrapping"><i class="ti-user"></i></span>
-                                <input type="text" class="form-control" id="userName" placeholder="Username"
+                                <input type="text" class="form-control" id="userName" placeholder="Email"
                                     aria-label="Username" aria-describedby="addon-wrapping">
                             </div>
                         </div>
                         <div class="col-md login-information">
                             <div class="input-group flex-nowrap input-group-lg col-md">
                                 <span class="input-group-text" id="addon-wrapping"><i class="ti-unlock"></i></span>
-                                <input type="password" id="passWord" class="form-control" placeholder="Password"
+                                <input type="password" id="passWord" class="form-control" placeholder="Mật khẩu"
                                     aria-label="Password" aria-describedby="addon-wrapping">
                                 <br>
                             </div>
                             <p id="note-pass" class="text-lg-start my-1"></p>
                         </div>
                         <div class="col-md">
-                            <div class="col-4">
-                                <a class="text-start h5" id="login-forgot" href="#">Forgot password?<br></a>
+                            <div class="row d-flex justify-content-between">
+                                <a class="h5 col-auto" id="login-forgot" href="#">Quên mật khẩu<br></a>
+                                <a class="h5 col-auto" id="login-forgot" href="/register">Tạo tài khoản<br></a>
                             </div>
-                            <a href="#" id="login-login" class="btn btn-lg my-3">Login</a>
+                            <a href="#" id="login-login" class="btn btn-lg my-3">Đăng nhập</a>
                         </div>
                     </div>
                     <div class="col-sm-8" id="login-password">
                         <div class="col-md">
-                            <h1 class="h1">Enter email</h1>
+                            <h1 class="h1">Nhập email</h1>
                         </div>
                         <div class="col-md">
                             <div class="input-group flex-nowrap input-group-lg mt-3 col-md">

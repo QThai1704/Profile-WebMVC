@@ -1,5 +1,12 @@
 package nqt.cv.CVProjectJavaMVC.repository;
 
-public class RoleRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import nqt.cv.CVProjectJavaMVC.domain.Role;
+
+@Repository
+public interface RoleRepository extends JpaRepository<Role, Long> {
+    Role findByName(String name);
     
 }

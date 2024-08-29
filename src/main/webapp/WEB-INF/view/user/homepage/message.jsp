@@ -128,6 +128,10 @@
                       <form:input type="email" class="form-control" id="recipient-email" path="email" disabled="true" />
                     </div>
                     <div class="mb-3">
+                      <label for="inputPassword" class="col-form-label">Mật khẩu</label>
+                      <form:input class="form-control" id="inputPassword" type="password" path="password" />
+                    </div>
+                    <div class="mb-3">
                       <label for="recipient-address" class="col-form-label">Địa chỉ</label>
                       <form:input type="text" class="form-control" id="recipient-address" path="address" />
                     </div>

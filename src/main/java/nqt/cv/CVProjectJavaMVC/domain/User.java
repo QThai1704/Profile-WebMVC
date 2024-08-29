@@ -32,7 +32,7 @@ public class User {
     @ManyToOne
     @JoinColumn(name = "roles")
     private Role role;
-
+    
     @OneToMany(mappedBy = "user")
     private List<Skill> skills;
 

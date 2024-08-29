@@ -3,9 +3,12 @@ package nqt.cv.CVProjectJavaMVC.controller.client;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import nqt.cv.CVProjectJavaMVC.domain.Achievement;
 import nqt.cv.CVProjectJavaMVC.domain.Experience;
@@ -14,6 +17,7 @@ import nqt.cv.CVProjectJavaMVC.domain.Skill;
 import nqt.cv.CVProjectJavaMVC.domain.Society;
 import nqt.cv.CVProjectJavaMVC.domain.Target;
 import nqt.cv.CVProjectJavaMVC.domain.User;
+import nqt.cv.CVProjectJavaMVC.domain.dto.RegisterDTO;
 import nqt.cv.CVProjectJavaMVC.service.AchievementService;
 import nqt.cv.CVProjectJavaMVC.service.ExperienceService;
 import nqt.cv.CVProjectJavaMVC.service.PortifolioService;
@@ -31,10 +35,11 @@ public class HomepageController {
     private final AchievementService achievementService;
     private final PortifolioService portifolioService;
     private final ExperienceService experienceService;
+    private final PasswordEncoder passwordEncoder;
 
     public HomepageController(UserService userService, TargetService targetService, SkillService skillService,
             SocietyService societyService, AchievementService achievementService, PortifolioService portifolioService,
-            ExperienceService experienceService) {
+            ExperienceService experienceService, PasswordEncoder passwordEncoder) {
         this.userService = userService;
         this.targetService = targetService;
         this.skillService = skillService;
@@ -42,6 +47,7 @@ public class HomepageController {
         this.achievementService = achievementService;
         this.portifolioService = portifolioService;
         this.experienceService = experienceService;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @GetMapping("/")
@@ -82,4 +88,17 @@ public class HomepageController {
         return "client/cv";
     }
 
+    @GetMapping("/register")
+    public String getRegister(Model model) {
+        model.addAttribute("registerUser", new User());
+        return "user/auth/register";
+    }
+
+    @PostMapping("/register")
+    public String postRegister(@ModelAttribute("registerUser") RegisterDTO registerDTO) {
+        User user = this.userService.getRegisterToUser(registerDTO);
+        user.setPassword(this.passwordEncoder.encode(user.getPassword()));
+        user.setRole(this.userService.getRoleByName("USER"));
+        return "redirect: /user/auth/login";
+    }
 }
