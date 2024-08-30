@@ -27,20 +27,20 @@
                                                 <h3 class="text-center font-weight-light my-4">Tạo tài khoản</h3>
                                             </div>
                                             <div class="card-body">
-                                                <form>
+                                                <form:form action="/register" method="post"
+                                                    modelAttribute="registerUser">
                                                     <div class=" row mb-3">
                                                         <div class="col-md-6">
                                                             <div class="form-floating mb-3 mb-md-0">
-                                                                <input class="form-control" id="inputFirstName"
+                                                                <form:input class="form-control" id="inputFirstName"
                                                                     type="text" placeholder="Enter your first name"
                                                                     path="firstName" />
                                                                 <label for="inputFirstName">Họ và tên đệm</label>
-
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-floating">
-                                                                <input class="form-control" id="inputLastName"
+                                                                <form:input class="form-control" id="inputLastName"
                                                                     type="text" placeholder="Enter your last name"
                                                                     path="lastName" />
                                                                 <label for="inputLastName">Tên</label>
@@ -48,14 +48,14 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-floating mb-3">
-                                                        <input class="form-control" id="inputEmail" type="email"
+                                                        <form:input class="form-control" id="inputEmail" type="email"
                                                             placeholder="name@example.com" path="email" />
                                                         <label for="inputEmail">Email</label>
                                                     </div>
                                                     <div class="row mb-3">
                                                         <div class="col-md-6">
                                                             <div class="form-floating mb-3 mb-md-0">
-                                                                <input class="form-control" id="inputPassword"
+                                                                <form:input class="form-control" id="inputPassword"
                                                                     type="password" placeholder="Create a password"
                                                                     path="password" />
                                                                 <label for="inputPassword">Mật khẩu</label>
@@ -63,8 +63,9 @@
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-floating mb-3 mb-md-0">
-                                                                <input class="form-control" id="inputPasswordConfirm"
-                                                                    type="password" placeholder="Confirm password"
+                                                                <form:input class="form-control"
+                                                                    id="inputPasswordConfirm" type="password"
+                                                                    placeholder="Confirm password"
                                                                     path="confirmPassword" />
                                                                 <label for="inputPasswordConfirm">Xác nhận mật
                                                                     khẩu</label>
@@ -77,7 +78,7 @@
                                                                 tài khoản</button>
                                                         </div>
                                                     </div>
-                                                </form>
+                                                </form:form>
                                             </div>
                                             <div class="card-footer text-center py-3">
                                                 <div class="small"><a href="/login">Có tài khoản? Quay lại đăng nhập</a>

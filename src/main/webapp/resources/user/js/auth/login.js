@@ -1,28 +1,3 @@
-//State tài khoản cá nhân
-var account = {
-    accountItem: [
-        {
-            userName: 'adminphuong',
-            passWord: '11111111'
-        },
-        {
-            userName: 'adminhieu',
-            passWord: '11111111'
-        },
-        {
-            userName: 'adminthai',
-            passWord: '11111111'
-        }
-    ]
-}
-
-var loginPassword = document.getElementById('login-password');
-var loginContact = document.getElementById('login-contact');
-var loginForgot = document.getElementById('login-forgot');
-var loginSubmit = document.getElementById('login-submit');
-var loginBack = document.getElementById('login-back');
-var loginAccount = document.getElementById('login-account');
-
 // Sử lý display cho các phần forgot, back to login và submit
 loginForgot.addEventListener("click", function () {
     loginPassword.style.display = 'block';
@@ -53,33 +28,9 @@ function checkLoginName(userName) {
 
 //Biểu thức chính quy của input passWord
 function checkLoginPass(password) {
-    var check = /^[A-Za-z0-9]{8,20}$/;
+    var check = /^[A-Za-z0-9]{6,20}$/;
     return check.test(password);
 }
-
-var login = document.getElementById('login-login');
-//Xử lý sự kiện click cho login
-login.addEventListener("click", function () {
-    if (checkLoginName(user.value) || checkLoginPass(pass.value)) {
-        for (let i = 0; i < account.accountItem.length; i++) {
-            if (user.value === account.accountItem[i].userName && pass.value === account.accountItem[i].passWord) {
-                login.setAttribute('href', './admin.html');
-                noteLoginPass.textContent = '';
-                break;
-            }
-            else {
-                noteLoginPass.textContent = "Incorrect account or password";
-                noteLoginPass.style.color = 'red';
-                noteLoginPass.style.fontSize = '20px';
-            }
-        }
-    }
-    else {
-        noteLoginPass.textContent = "Incorrect account or password";
-        noteLoginPass.style.color = 'red';
-        noteLoginPass.style.fontSize = '20px';
-    }
-})
 
 //Biểu thức chính quy cho email
 var checkEmail = /^([a-zA-Z0-9]+)@gmail\.com$/;

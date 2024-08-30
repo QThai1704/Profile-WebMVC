@@ -56,7 +56,7 @@ public class HomepageController {
     }
 
     @GetMapping("/login")
-    public String getLogin() {
+    public String getLogin(Model model) {
         return "user/auth/login";
     }
 
@@ -90,15 +90,16 @@ public class HomepageController {
 
     @GetMapping("/register")
     public String getRegister(Model model) {
-        model.addAttribute("registerUser", new User());
+        model.addAttribute("registerUser", new RegisterDTO());
         return "user/auth/register";
     }
 
     @PostMapping("/register")
     public String postRegister(@ModelAttribute("registerUser") RegisterDTO registerDTO) {
-        User user = this.userService.getRegisterToUser(registerDTO);
-        user.setPassword(this.passwordEncoder.encode(user.getPassword()));
-        user.setRole(this.userService.getRoleByName("USER"));
-        return "redirect: /user/auth/login";
+        User newUser = this.userService.getRegisterToUser(registerDTO);
+        newUser.setPassword(this.passwordEncoder.encode(newUser.getPassword()));
+        newUser.setRole(this.userService.getRoleByName("USER"));
+        this.userService.saveUser(newUser);
+        return "redirect:/login";
     }
 }
