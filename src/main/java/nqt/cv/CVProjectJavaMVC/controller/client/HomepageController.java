@@ -102,4 +102,9 @@ public class HomepageController {
         this.userService.saveUser(newUser);
         return "redirect:/login";
     }
+
+    @GetMapping("/access-deny")
+    public String getAccessDeny() {
+        return "user/auth/deny";
+    }
 }

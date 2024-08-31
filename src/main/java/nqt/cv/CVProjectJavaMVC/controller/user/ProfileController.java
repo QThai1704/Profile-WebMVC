@@ -24,7 +24,7 @@ import nqt.cv.CVProjectJavaMVC.service.UserService;
 import nqt.cv.CVProjectJavaMVC.service.SocietyService;
 
 @Controller
-public class DashboardController {
+public class ProfileController {
     private final UserService userService;
     private final TargetService targetService;
     private final SkillService skillService;
@@ -33,7 +33,7 @@ public class DashboardController {
     private final PortifolioService portifolioService;
     private final ExperienceService experienceService;
 
-    public DashboardController(UserService userService, TargetService targetService, SkillService skillService,
+    public ProfileController(UserService userService, TargetService targetService, SkillService skillService,
             SocietyService societyService, AchievementService achievementService, PortifolioService portifolioService,
             ExperienceService experienceService) {
         this.userService = userService;

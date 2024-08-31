@@ -90,6 +90,10 @@
 		</dependency>
 		<!-- Sercurity -->
 		<!-- Session -->
+		<dependency>
+			<groupId>org.springframework.session</groupId>
+			<artifactId>spring-session-jdbc</artifactId>
+		</dependency>
 		<!-- Kafka -->
 		<!-- Docker -->
 	</dependencies>
