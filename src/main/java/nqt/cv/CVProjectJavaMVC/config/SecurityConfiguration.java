@@ -59,9 +59,10 @@ public class SecurityConfiguration {
                         .requestMatchers("/", "/login", "/client/**", "/css/**", "/js/**",
                                 "/images/**", "fonts", "/user/css/**", "/user/js/**")
                         .permitAll()
-                        .requestMatchers("/user/**").hasAuthority("USER")
-                        .requestMatchers("/admin/**", "/user/**").hasAnyRole("ADMIN", "USER")
-                        .anyRequest().authenticated())
+                        .requestMatchers("/user/**").hasAnyRole("ADMIN", "USER")
+                        .requestMatchers("/admin/**").hasRole("ADMIN")
+                        .anyRequest().authenticated()
+                        )
                 .formLogin(formLogin -> formLogin
                         .loginPage("/login")
                         .failureUrl("/login?error")
@@ -69,7 +70,6 @@ public class SecurityConfiguration {
                         .permitAll())
                 .exceptionHandling(ex -> ex
                         .accessDeniedPage("/access-deny"));
-
         return http.build();
     }
 }
