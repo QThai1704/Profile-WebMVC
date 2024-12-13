@@ -7,7 +7,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "skills")
 public class Skill {
@@ -20,51 +26,5 @@ public class Skill {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
-    }
-
-    public Skill(long id, String name, int level) {
-        this.id = id;
-        this.name = name;
-        this.level = level;
-    }
-
-    public Skill() {
-    }
-
-    @Override
-    public String toString() {
-        return "Skill [id=" + id + ", name=" + name + ", level=" + level + "]";
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 
 }

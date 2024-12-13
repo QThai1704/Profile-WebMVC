@@ -68,6 +68,7 @@ public class SecurityConfiguration {
                         .failureUrl("/login?error")
                         .successHandler(customSuccessHandler())
                         .permitAll())
+                .logout(logout -> logout.deleteCookies("JSESSIONID").invalidateHttpSession(true))
                 .exceptionHandling(ex -> ex
                         .accessDeniedPage("/access-deny"));
         return http.build();
