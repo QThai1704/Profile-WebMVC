@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import nqt.cv.CVProjectJavaMVC.domain.Achievement;
 import nqt.cv.CVProjectJavaMVC.domain.Experience;
-import nqt.cv.CVProjectJavaMVC.domain.Portifolio;
+import nqt.cv.CVProjectJavaMVC.domain.Portfolio;
 import nqt.cv.CVProjectJavaMVC.domain.Skill;
 import nqt.cv.CVProjectJavaMVC.domain.Society;
 import nqt.cv.CVProjectJavaMVC.domain.Target;
@@ -20,7 +20,7 @@ import nqt.cv.CVProjectJavaMVC.domain.User;
 import nqt.cv.CVProjectJavaMVC.domain.dto.RegisterDTO;
 import nqt.cv.CVProjectJavaMVC.service.AchievementService;
 import nqt.cv.CVProjectJavaMVC.service.ExperienceService;
-import nqt.cv.CVProjectJavaMVC.service.PortifolioService;
+import nqt.cv.CVProjectJavaMVC.service.PortfolioService;
 import nqt.cv.CVProjectJavaMVC.service.SkillService;
 import nqt.cv.CVProjectJavaMVC.service.SocietyService;
 import nqt.cv.CVProjectJavaMVC.service.TargetService;
@@ -33,12 +33,12 @@ public class HomepageController {
     private final SkillService skillService;
     private final SocietyService societyService;
     private final AchievementService achievementService;
-    private final PortifolioService portifolioService;
+    private final PortfolioService portifolioService;
     private final ExperienceService experienceService;
     private final PasswordEncoder passwordEncoder;
 
     public HomepageController(UserService userService, TargetService targetService, SkillService skillService,
-            SocietyService societyService, AchievementService achievementService, PortifolioService portifolioService,
+            SocietyService societyService, AchievementService achievementService, PortfolioService portifolioService,
             ExperienceService experienceService, PasswordEncoder passwordEncoder) {
         this.userService = userService;
         this.targetService = targetService;
@@ -68,7 +68,7 @@ public class HomepageController {
         List<Skill> skills = this.skillService.getSkillsByUserId(user.getId());
         List<Achievement> achievements = this.achievementService.getAchievementsByUserId(user.getId());
         List<Experience> experiences = this.experienceService.getExperiencesByUserId(user.getId());
-        List<Portifolio> portifolios = this.portifolioService.getPortifoliosByUserId(user.getId());
+        List<Portfolio> portifolios = this.portifolioService.getPortifoliosByUserId(user.getId());
         for (Society societie : societies) {
             if (societie.getName().equals("Facebook")) {
                 model.addAttribute("facebook", societie.getLink());
